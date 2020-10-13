@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.35",
+    "facepaint": "^1.2.1",
     "glamor": "^2.20.40",
     "next": "9.5.5",
     "react": "16.13.1",
