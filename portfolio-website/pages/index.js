@@ -1,22 +1,16 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import React from "react";
+import "glamor/reset";
+
+import { SiteHeader } from "../components/SiteHeader";
 
 export default function Home() {
   return (
-    <>
-      <title>Adi's Portfolio</title>
-      <div>
-        <div
-          css={{
-            fontSize: "72px",
-            fontFamily: "Poppins-Bold",
-            letterSpacing: "5px",
-          }}
-        >
-          Hey There!
-        </div>
-      </div>
-    </>
+    <div css={{ backgroundColor: "#0E0E0E", width: "100vw" }}>
+      <head>
+        <title>Adi's Portfolio</title>
+      </head>
+      <SiteHeader />
+    </div>
   );
 }
