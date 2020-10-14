@@ -32,13 +32,12 @@ export function SocialsPill() {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        position: "absolute",
+        position: "fixed",
         right: [computeGridSize(6), computeGridSize(9)],
         bottom: [computeGridSize(6), computeGridSize(9)],
         backgroundColor: SOCIALS_BG,
         borderRadius: "48px",
         maxWidth: computeGridSize(54),
-        width: "100%",
         maxHeight: computeGridSize(14),
         height: "100%",
       })}
@@ -65,7 +64,6 @@ export function SocialsPill() {
                     marginLeft: ["", "-2px"],
                   },
                 ],
-                transition: ".2s",
               })}
               src={item.icon}
               key={item.url}

@@ -1,17 +1,17 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { ProjectsSection } from "../components/ProjectsSection";
 
 import { SiteHeader } from "../components/SiteHeader";
 import { SocialsPill } from "../components/SocialsPill";
-import { MAIN_BG } from "../styles/colors";
 
 export default function Home() {
   return (
     <div
       css={{
-        backgroundColor: MAIN_BG,
-        width: "100vw",
-        minHeight: "100vh",
+        background: "url(/main-bg.jpg), rgba(0,0,0,0.65)",
+        backgroundBlendMode: "darken",
+        // width: "100vw",
         position: "relative",
       }}
     >
@@ -28,6 +28,7 @@ export default function Home() {
       </head>
       <SiteHeader />
       <SocialsPill />
+      <ProjectsSection />
     </div>
   );
 }
