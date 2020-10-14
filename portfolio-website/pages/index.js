@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import "glamor/reset";
 
 import { SiteHeader } from "../components/SiteHeader";
 import { SocialsPill } from "../components/SocialsPill";
@@ -18,6 +17,14 @@ export default function Home() {
     >
       <head>
         <title>Adi's Portfolio</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <SiteHeader />
       <SocialsPill />
