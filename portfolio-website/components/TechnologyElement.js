@@ -33,7 +33,7 @@ export function TechnologyElement({ technology }) {
       )}
       <p
         css={{
-          fontFamily: "Rubik-Regular",
+          fontFamily: "Rubik",
           fontSize: FONT_100,
         }}
       >

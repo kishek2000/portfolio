@@ -57,7 +57,8 @@ export function SiteHeader() {
           <p
             css={mq({
               fontSize: [FONT_300, FONT_400, FONT_500],
-              fontFamily: "WorkSans-Bold",
+              fontFamily: "Work Sans",
+              fontWeight: "bold",
               letterSpacing: ["3px", "5px"],
               color: "#DCE6FF",
               margin: 0,
@@ -74,7 +75,7 @@ export function SiteHeader() {
           />
           <p
             css={mq({
-              fontFamily: "Rubik-Regular",
+              fontFamily: "Rubik",
               fontSize: [FONT_100, FONT_150, FONT_200],
               color: "white",
               margin: 0,

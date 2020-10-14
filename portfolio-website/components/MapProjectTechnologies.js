@@ -22,7 +22,8 @@ export function MapProjectTechnologies({ techCategory, projectInfo }) {
       >
         <p
           css={{
-            fontFamily: "Rubik-Bold",
+            fontFamily: "Rubik",
+            fontWeight: "bold",
             fontSize: FONT_150,
             whiteSpace: "nowrap",
           }}

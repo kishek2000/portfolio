@@ -50,7 +50,7 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo }) {
           projectInfo={projectInfo}
         />
         <GapVertical times={4.5} />
-        <p css={{ fontFamily: "Rubik-Regular", fontSize: FONT_150 }}>
+        <p css={{ fontFamily: "Rubik", fontSize: FONT_150 }}>
           {projectInfo.description}
         </p>
         <GapVertical times={9} />
@@ -66,7 +66,9 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
       <div
         css={{ display: "flex", flexDirection: "row", alignItems: "center" }}
       >
-        <p css={{ fontFamily: "Rubik-Bold", fontSize: FONT_300 }}>
+        <p
+          css={{ fontFamily: "Rubik", fontSize: FONT_300, fontWeight: "bold" }}
+        >
           {projectInfo.name}
         </p>
         <GapHorizontal times={6} />
@@ -75,7 +77,7 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
       {projectInfo.slogan && (
         <>
           <GapVertical times={-1} />
-          <p css={{ fontFamily: "Rubik-Regular", fontSize: FONT_200 }}>
+          <p css={{ fontFamily: "Rubik", fontSize: FONT_200 }}>
             {projectInfo.slogan}
           </p>
         </>
@@ -83,7 +85,7 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
       <GapVertical times={2} />
       <p
         css={{
-          fontFamily: "Rubik-Regular",
+          fontFamily: "Rubik",
           fontSize: FONT_50,
           // opacity: "0.6",
         }}
@@ -101,7 +103,8 @@ export function ProjectStatusPill({ style }) {
     <div
       css={{
         background: style.color,
-        fontFamily: "Rubik-Bold",
+        fontFamily: "Rubik",
+        fontWeight: "bold",
         fontSize: FONT_50,
         padding: "3px 12px",
         borderRadius: "8px",

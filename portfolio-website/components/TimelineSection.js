@@ -21,7 +21,7 @@ export function TimelineSection({ monthString, isParent, projects }) {
       {!isParent && <GapVertical times={6} />}
       <p
         css={{
-          fontFamily: "Rubik-Regular",
+          fontFamily: "Rubik",
           fontSize: FONT_200,
           color: "white",
           margin: "0 auto",
