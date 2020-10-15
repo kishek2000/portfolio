@@ -38,7 +38,7 @@ export function SiteHeader() {
           src="/folio-image.png"
           css={mq({
             maxWidth: [
-              computeGridSize(80),
+              computeGridSize(65),
               computeGridSize(100),
               computeGridSize(120),
             ],
