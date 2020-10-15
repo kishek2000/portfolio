@@ -153,11 +153,6 @@ export const QualificationData = [
             title: "TypeScript",
             icon: "/typescript.png",
           },
-          {
-            id: "expo",
-            title: "Expo",
-            icon: "/expo.png",
-          },
         ],
       },
       {
@@ -261,6 +256,22 @@ export const QualificationData = [
             id: "dynamodb",
             title: "DynamoDB",
             icon: "/dynamodb.png",
+          },
+        ],
+      },
+      {
+        id: "frameworks",
+        title: "Frameworks",
+        technologies: [
+          {
+            id: "nextjs",
+            title: "NextJS",
+            icon: "/nextjs.png",
+          },
+          {
+            id: "expo",
+            title: "Expo",
+            icon: "/expo.png",
           },
         ],
       },
