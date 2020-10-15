@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { FONT_150, FONT_200 } from "../styles/fonts";
+import { FONT_100, FONT_150, FONT_200 } from "../styles/fonts";
 import { computeGridSize, maxWidth } from "../styles/grid";
 import { mq } from "../styles/mq";
 import { GapVertical } from "./GapVertical";
@@ -36,12 +36,15 @@ export function TimelineSection({ monthString, isParent, projects }) {
       <GapVertical times={6} />
       <TimeLine months={projects.length} />
       {projects.map((project) => (
-        <ProjectCard
-          flipSide={project.flipSide}
-          projNo={project.projNo}
-          isParent={isParent}
-          projectInfo={project.projectInfo}
-        />
+        <>
+          <ProjectCard
+            flipSide={project.flipSide}
+            projNo={project.projNo}
+            isParent={isParent}
+            projectInfo={project.projectInfo}
+            link={project.link}
+          />
+        </>
       ))}
     </div>
   );

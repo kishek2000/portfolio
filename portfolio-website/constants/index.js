@@ -15,6 +15,10 @@ export const Projects = [
           status: "discontinued",
           roles: ["Frontend Lead", "Full Stack Developer"],
         },
+        link: {
+          title: "VIDEO DEMO >",
+          url: "https://www.youtube.com/watch?v=znZc0CzMUmQ",
+        },
       },
     ],
   },
@@ -35,6 +39,10 @@ export const Projects = [
           status: "content searching",
           roles: ["Project Lead"],
         },
+        link: {
+          title: "LIVE DEMO >",
+          url: "https://www.kishek2000.github.io/discovery",
+        },
       },
     ],
   },
@@ -53,6 +61,10 @@ export const Projects = [
           backend: ["typescript"],
           status: "optimising",
           roles: ["Website Lead", "UI Designer"],
+        },
+        link: {
+          title: "GLOBAL WEBSITE >",
+          url: "https://www.sadafal-education.com",
         },
       },
     ],

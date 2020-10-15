@@ -15,7 +15,7 @@ import { GapHorizontal } from "./GapHorizontal";
 import { GapVertical } from "./GapVertical";
 import { MapProjectTechnologies } from "./MapProjectTechnologies";
 
-export function ProjectCard({ flipSide, projNo, isParent, projectInfo }) {
+export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
   const vertDist = isParent ? 24 : 34;
   const factor = projNo - 1;
   const sameMonthSeparation = 6 + 16 + 85;
@@ -34,47 +34,72 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo }) {
 
   return (
     <div
-      css={mq({
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        background:
-          "linear-gradient(180deg, rgba(35, 35, 35) 50%, rgba(22.5, 22.5, 22.5) 100%);",
-        maxWidth: [computeGridSize(220), computeGridSize(220)],
-        width: ["80%", "50%"],
+      css={{
         position: "absolute",
         right: ["", flipSide ? "" : `calc(50% + ${computeGridSize(12)})`],
         left: ["", flipSide ? `calc(50% + ${computeGridSize(12)})` : ""],
-        margin: ["0 auto", ""],
         top: topCalculation,
-        borderRadius: 8,
-        color: "white",
-      })}
+        maxWidth: [computeGridSize(220), computeGridSize(220)],
+        width: ["80%", "50%"],
+        margin: ["0 auto", ""],
+      }}
     >
       <div
         css={mq({
-          padding: ["32px 35px", "8% 8%"],
           display: "flex",
           flexDirection: "column",
-          margin: ["0 auto", "none"],
+          alignItems: "center",
+          background:
+            "linear-gradient(180deg, rgba(35, 35, 35) 50%, rgba(22.5, 22.5, 22.5) 100%);",
+
+          borderRadius: 8,
+          color: "white",
         })}
       >
-        <ProjectCardHeader
-          projectStatusStyle={projectStatusStyle}
-          projectInfo={projectInfo}
-        />
-        <GapVertical times={4.5} />
-        <p
+        <div
           css={mq({
-            fontFamily: "Rubik",
-            fontSize: [FONT_100, FONT_150],
+            padding: ["32px 35px", "8% 8%"],
+            display: "flex",
+            flexDirection: "column",
+            margin: ["0 auto", "none"],
           })}
         >
-          {projectInfo.description}
-        </p>
-        <GapVertical times={9} />
-        <ProjectTechnologies projectInfo={projectInfo} />
+          <ProjectCardHeader
+            projectStatusStyle={projectStatusStyle}
+            projectInfo={projectInfo}
+          />
+          <GapVertical times={4.5} />
+          <p
+            css={mq({
+              fontFamily: "Rubik",
+              fontSize: [FONT_100, FONT_150],
+            })}
+          >
+            {projectInfo.description}
+          </p>
+          <GapVertical times={9} />
+          <ProjectTechnologies projectInfo={projectInfo} />
+        </div>
       </div>
+      {link && (
+        <div css={{ width: "100%", textAlign: "right" }}>
+          <GapVertical times={2} />
+          <a
+            href={link.url}
+            css={{ color: "white", textDecoration: "none" }}
+            target="_blank"
+          >
+            <p
+              css={{
+                fontFamily: "Rubik",
+                fontSize: [FONT_100, FONT_150],
+              }}
+            >
+              {link.title}
+            </p>
+          </a>
+        </div>
+      )}
     </div>
   );
 }
