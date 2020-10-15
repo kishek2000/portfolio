@@ -45,7 +45,7 @@ export function TimelineSection({ monthString, isParent, projects }) {
             link={project.link}
           />
           {project.projectInfo.name === "Sadafal Education" && (
-            <GapVertical times={6} />
+            <div css={mq({ marginBottom: [computeGridSize(6), 0] })} />
           )}
         </>
       ))}
