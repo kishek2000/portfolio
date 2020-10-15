@@ -22,7 +22,7 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
   const topCalculation = [
     `calc(${computeGridSize(
       isParent ? 16 : 20
-    )} + ${factor} * ${computeGridSize(sameMonthSeparation + 24)})`,
+    )} + ${factor} * ${computeGridSize(sameMonthSeparation + 16)})`,
     `calc(${computeGridSize(vertDist)} + ${factor} * ${computeGridSize(
       sameMonthSeparation
     )})`,
