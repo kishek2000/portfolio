@@ -41,7 +41,7 @@ export const Projects = [
         },
         link: {
           title: "LIVE DEMO >",
-          url: "https://www.kishek2000.github.io/discovery",
+          url: "https://kishek2000.github.io/discovery",
         },
       },
     ],
