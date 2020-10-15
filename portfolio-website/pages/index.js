@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div
       css={{
-        background: "rgb(14, 14, 14)",
+        background: "url(/main-bg.jpg)",
         backgroundBlendMode: "darken",
         // width: "100vw",
         position: "relative",
