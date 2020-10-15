@@ -34,7 +34,7 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
 
   return (
     <div
-      css={{
+      css={mq({
         position: "absolute",
         right: ["", flipSide ? "" : `calc(50% + ${computeGridSize(12)})`],
         left: ["", flipSide ? `calc(50% + ${computeGridSize(12)})` : ""],
@@ -42,7 +42,7 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
         maxWidth: [computeGridSize(220), computeGridSize(220)],
         width: ["80%", "50%"],
         margin: ["0 auto", ""],
-      }}
+      })}
     >
       <div
         css={mq({
@@ -90,10 +90,10 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
             target="_blank"
           >
             <p
-              css={{
+              css={mq({
                 fontFamily: "Rubik",
                 fontSize: [FONT_100, FONT_150],
-              }}
+              })}
             >
               {link.title}
             </p>
