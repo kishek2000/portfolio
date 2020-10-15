@@ -28,18 +28,23 @@ export function SocialsPill() {
   return (
     <div
       css={mq({
-        display: ["none", "flex"],
+        display: "flex",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        position: "fixed",
-        right: [computeGridSize(6), computeGridSize(9)],
+        position: ["relative", "fixed", "fixed"],
+        right: ["", computeGridSize(9)],
         bottom: [computeGridSize(6), computeGridSize(9)],
         backgroundColor: SOCIALS_BG,
         borderRadius: "48px",
-        maxWidth: computeGridSize(54),
-        maxHeight: computeGridSize(14),
-        height: "100%",
+        padding: "5px 5px",
+        maxWidth: [
+          computeGridSize(40),
+          computeGridSize(80),
+          computeGridSize(100),
+        ],
+        zIndex: 2,
+        margin: "0 auto",
       })}
     >
       <GapHorizontal times={6} />
@@ -51,8 +56,8 @@ export function SocialsPill() {
           <a href={item.url} target="_blank" key={index}>
             <img
               css={mq({
-                maxWidth: computeGridSize(7.5),
-                maxHeight: computeGridSize(7.5),
+                maxWidth: [computeGridSize(5), computeGridSize(7.5)],
+                maxHeight: [computeGridSize(5), computeGridSize(7.5)],
                 objectFit: "contain",
                 "&:hover": [
                   {
@@ -62,6 +67,8 @@ export function SocialsPill() {
                     height: ["", computeGridSize(8.5)],
                     marginRight: ["", "-2px"],
                     marginLeft: ["", "-2px"],
+                    marginTop: "-2px",
+                    marginBottom: "-2px",
                   },
                 ],
               })}

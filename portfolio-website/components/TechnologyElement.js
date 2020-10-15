@@ -1,9 +1,10 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { FONT_100 } from "../styles/fonts";
+import { FONT_100, FONT_50 } from "../styles/fonts";
 import { GapHorizontal } from "./GapHorizontal";
 import { TechnologyData } from "../constants/index";
 import { computeGridSize } from "../styles/grid";
+import { mq } from "../styles/mq";
 
 export function TechnologyElement({ technology }) {
   const data = TechnologyData.filter((item) => {
@@ -32,10 +33,10 @@ export function TechnologyElement({ technology }) {
         </>
       )}
       <p
-        css={{
+        css={mq({
           fontFamily: "Rubik",
-          fontSize: FONT_100,
-        }}
+          fontSize: [FONT_50, FONT_100],
+        })}
       >
         {data.title}
       </p>

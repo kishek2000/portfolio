@@ -38,50 +38,64 @@ export function SiteHeader() {
           src="/folio-image.png"
           css={mq({
             maxWidth: [
-              computeGridSize(100),
+              computeGridSize(80),
               computeGridSize(100),
               computeGridSize(120),
             ],
-            width: ["45%", "30%"],
+            width: ["95%", "40%", "35%"],
           })}
         />
-        <GapHorizontal css={mq({ display: ["none", "flex"] })} times={12} />
-        <GapVertical css={mq({ display: ["flex", "none"] })} times={8} />
+        <div
+          css={mq({
+            display: ["none", "flex"],
+            marginRight: computeGridSize(12),
+          })}
+        />
+        <div
+          css={mq({
+            display: ["flex", "none"],
+            marginBottom: computeGridSize(8),
+          })}
+        />
         <div
           css={mq({
             display: "flex",
             flexDirection: "column",
-            maxWidth: [computeGridSize(60), "none"],
+            justifyContent: "center",
           })}
         >
           <p
             css={mq({
-              fontSize: [FONT_300, FONT_400, FONT_500],
+              fontSize: ["48px", "48px", FONT_500],
               fontFamily: "Work Sans",
               fontWeight: "bold",
               letterSpacing: ["3px", "5px"],
               color: "#DCE6FF",
-              margin: 0,
-              alignSelf: ["center", ""],
-              width: ["", "95%"],
-              whiteSpace: ["", "", "nowrap"],
+              margin: ["0 auto", 0],
+              // width: ["90%", "70%"],
             })}
           >
-            Hello, I'm <br />
+            Hello, I'm
+            <br />
             Adi Kishore.
           </p>
           <div
-            css={mq({ marginBottom: [computeGridSize(3), computeGridSize(6)] })}
+            css={mq({
+              marginBottom: [
+                computeGridSize(3),
+                computeGridSize(3),
+                computeGridSize(6),
+              ],
+            })}
           />
           <p
             css={mq({
               fontFamily: "Rubik",
-              fontSize: [FONT_100, FONT_150, FONT_200],
+              fontSize: [FONT_150, FONT_150, FONT_200],
               color: "white",
-              margin: 0,
-              alignSelf: ["center", ""],
-              maxWidth: ["", computeGridSize(120), computeGridSize(180)],
-              width: ["", "95%"],
+              margin: ["0 auto", "0 auto", 0],
+              width: "100%",
+              maxWidth: [computeGridSize(80), "none", computeGridSize(200)],
             })}
           >
             I'm a Junior Developer and UI Designer looking to make a genuine

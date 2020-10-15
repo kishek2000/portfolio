@@ -1,10 +1,11 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
-import { FONT_150 } from "../styles/fonts";
+import { FONT_100, FONT_150 } from "../styles/fonts";
 import { GapVertical } from "./GapVertical";
 import { GapHorizontal } from "./GapHorizontal";
 import { titleCase } from "./titleCase";
 import { TechnologyElement } from "./TechnologyElement";
+import { mq } from "../styles/mq";
 
 export function MapProjectTechnologies({ techCategory, projectInfo }) {
   if (projectInfo[techCategory]) {
@@ -21,12 +22,12 @@ export function MapProjectTechnologies({ techCategory, projectInfo }) {
         }}
       >
         <p
-          css={{
+          css={mq({
             fontFamily: "Rubik",
             fontWeight: "bold",
-            fontSize: FONT_150,
+            fontSize: [FONT_100, FONT_100, FONT_150],
             whiteSpace: "nowrap",
-          }}
+          })}
         >
           {title}
         </p>
@@ -44,9 +45,7 @@ export function MapProjectTechnologies({ techCategory, projectInfo }) {
             <>
               <TechnologyElement technology={technology} />
               {index !== projectInfo[techCategory].length - 1 && (
-                <>
-                  <GapHorizontal times={3} />
-                </>
+                <GapHorizontal times={3} />
               )}
             </>
           ))}

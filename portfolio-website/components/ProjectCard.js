@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
+import { AnimatePresence, motion } from "framer-motion";
 import { ProjectStatusStyles } from "../constants";
 import {
   FONT_100,
@@ -9,17 +10,23 @@ import {
   FONT_50,
 } from "../styles/fonts";
 import { computeGridSize } from "../styles/grid";
+import { mq } from "../styles/mq";
 import { GapHorizontal } from "./GapHorizontal";
 import { GapVertical } from "./GapVertical";
 import { MapProjectTechnologies } from "./MapProjectTechnologies";
 
 export function ProjectCard({ flipSide, projNo, isParent, projectInfo }) {
-  const vertDist = isParent ? 28 : 34;
+  const vertDist = isParent ? 24 : 34;
   const factor = projNo - 1;
   const sameMonthSeparation = 6 + 16 + 85;
-  const topCalculation = `calc(${computeGridSize(
-    vertDist
-  )} + ${factor} * ${computeGridSize(sameMonthSeparation)})`;
+  const topCalculation = [
+    `calc(${computeGridSize(
+      isParent ? 16 : 20
+    )} + ${factor} * ${computeGridSize(sameMonthSeparation + 24)})`,
+    `calc(${computeGridSize(vertDist)} + ${factor} * ${computeGridSize(
+      sameMonthSeparation
+    )})`,
+  ];
 
   const projectStatusStyle = ProjectStatusStyles.filter((status) => {
     return status.id === projectInfo.status;
@@ -27,30 +34,42 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo }) {
 
   return (
     <div
-      css={{
+      css={mq({
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         background:
-          "linear-gradient(180deg, rgba(40, 40, 40) 50%, rgba(20, 20, 20) 100%);",
-        width: computeGridSize(177),
+          "linear-gradient(180deg, rgba(35, 35, 35) 50%, rgba(22.5, 22.5, 22.5) 100%);",
+        maxWidth: [computeGridSize(220), computeGridSize(220)],
+        width: ["80%", "50%"],
         position: "absolute",
-        right: flipSide ? "" : `calc(50% + ${computeGridSize(12)})`,
-        left: flipSide ? `calc(50% + ${computeGridSize(12)})` : "",
+        right: ["", flipSide ? "" : `calc(50% + ${computeGridSize(12)})`],
+        left: ["", flipSide ? `calc(50% + ${computeGridSize(12)})` : ""],
+        margin: ["0 auto", ""],
         top: topCalculation,
         borderRadius: 8,
         color: "white",
-      }}
+      })}
     >
       <div
-        css={{ margin: "64px 70px", display: "flex", flexDirection: "column" }}
+        css={mq({
+          padding: ["32px 35px", "8% 8%"],
+          display: "flex",
+          flexDirection: "column",
+          margin: ["0 auto", "none"],
+        })}
       >
         <ProjectCardHeader
           projectStatusStyle={projectStatusStyle}
           projectInfo={projectInfo}
         />
         <GapVertical times={4.5} />
-        <p css={{ fontFamily: "Rubik", fontSize: FONT_150 }}>
+        <p
+          css={mq({
+            fontFamily: "Rubik",
+            fontSize: [FONT_100, FONT_150],
+          })}
+        >
           {projectInfo.description}
         </p>
         <GapVertical times={9} />
@@ -64,20 +83,55 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
   return (
     <>
       <div
-        css={{ display: "flex", flexDirection: "row", alignItems: "center" }}
+        css={mq({
+          display: "flex",
+          flexDirection: ["column", "row"],
+          alignItems: ["flex-start", "center"],
+        })}
       >
         <p
-          css={{ fontFamily: "Rubik", fontSize: FONT_300, fontWeight: "bold" }}
+          css={mq({
+            fontFamily: "Rubik",
+            fontSize: [FONT_200, FONT_200, FONT_300],
+            fontWeight: "bold",
+          })}
         >
           {projectInfo.name}
         </p>
-        <GapHorizontal times={6} />
+        <div
+          css={mq({
+            display: ["none", "flex"],
+            marginRight: computeGridSize(6),
+          })}
+        />
+        <div
+          css={mq({
+            display: ["flex", "none"],
+            marginBottom: computeGridSize(2),
+          })}
+        />
         <ProjectStatusPill style={projectStatusStyle} />
       </div>
       {projectInfo.slogan && (
         <>
-          <GapVertical times={-1} />
-          <p css={{ fontFamily: "Rubik", fontSize: FONT_200 }}>
+          <div
+            css={mq({
+              display: ["none", "flex"],
+              marginBottom: computeGridSize(-1),
+            })}
+          />
+          <div
+            css={mq({
+              display: ["flex", "none"],
+              marginBottom: computeGridSize(2),
+            })}
+          />
+          <p
+            css={mq({
+              fontFamily: "Rubik",
+              fontSize: [FONT_150, FONT_150, FONT_200],
+            })}
+          >
             {projectInfo.slogan}
           </p>
         </>
@@ -87,10 +141,8 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
         css={{
           fontFamily: "Rubik",
           fontSize: FONT_50,
-          // opacity: "0.6",
         }}
       >
-        {console.log(projectInfo.roles.length)}
         ROLE{projectInfo.roles.length >= 2 ? "S" : ""} -{" "}
         {projectInfo.roles.join(", ")}
       </p>
@@ -101,14 +153,15 @@ export function ProjectCardHeader({ projectStatusStyle, projectInfo }) {
 export function ProjectStatusPill({ style }) {
   return (
     <div
-      css={{
+      css={mq({
         background: style.color,
         fontFamily: "Rubik",
         fontWeight: "bold",
-        fontSize: FONT_50,
+        fontSize: ["7.5px", FONT_50],
         padding: "3px 12px",
         borderRadius: "8px",
-      }}
+        textAlign: "center",
+      })}
     >
       {style.title}
     </div>
@@ -118,17 +171,23 @@ export function ProjectStatusPill({ style }) {
 export function ProjectTechnologies({ projectInfo }) {
   return (
     <div
-      css={{
+      css={mq({
         display: "flex",
-        flexDirection: "row",
-        width: "90%",
+        flexDirection: ["column", "row"],
+        width: "85%",
         justifyContent: "space-between",
         color: "white",
-      }}
+      })}
     >
       <MapProjectTechnologies
         techCategory="frontend"
         projectInfo={projectInfo}
+      />
+      <div
+        css={mq({
+          display: ["flex", "none"],
+          marginBottom: computeGridSize(4),
+        })}
       />
       <MapProjectTechnologies
         techCategory="backend"

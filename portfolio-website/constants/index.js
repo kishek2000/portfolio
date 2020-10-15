@@ -97,6 +97,213 @@ export const Projects = [
   },
 ];
 
+export const QualificationData = [
+  {
+    class: "full-stack",
+    title: "Full Stack Technologies",
+    categories: [
+      {
+        id: "frontend",
+        title: "Frontend",
+        technologies: [
+          {
+            id: "react",
+            title: "React",
+            icon: "/react.png",
+          },
+          {
+            id: "react-native",
+            title: "React Native",
+            icon: "/react.png",
+          },
+          {
+            id: "html",
+            title: "HTML",
+            icon: "/html.png",
+          },
+          {
+            id: "emotion",
+            title: "Emotion",
+            icon: "/css.png",
+          },
+          {
+            id: "css",
+            title: "CSS",
+            icon: "/css.png",
+          },
+          {
+            id: "javascript",
+            title: "JavaScript",
+            icon: "/javascript.png",
+          },
+          {
+            id: "typescript",
+            title: "TypeScript",
+            icon: "/typescript.png",
+          },
+          {
+            id: "expo",
+            title: "Expo",
+            icon: "/expo.png",
+          },
+        ],
+      },
+      {
+        id: "design-prototype",
+        title: "Design and Prototyping",
+        technologies: [
+          {
+            id: "figma",
+            title: "Figma",
+            icon: "/figma.png",
+          },
+          {
+            id: "sketch",
+            title: "Sketch",
+            icon: "/sketch.png",
+          },
+        ],
+      },
+      {
+        id: "devops",
+        title: "DevOps",
+        technologies: [
+          {
+            id: "github",
+            title: "GitHub",
+            icon: "/github.png",
+          },
+          {
+            id: "gitlab",
+            title: "GitLab",
+            icon: "/gitlab.png",
+          },
+        ],
+      },
+      {
+        id: "backend",
+        title: "Backend",
+        technologies: [
+          {
+            id: "typescript",
+            title: "TypeScript",
+            icon: "/typescript.png",
+          },
+          {
+            id: "aws",
+            title: "Amazon Web Services",
+            icon: "/aws.png",
+          },
+          {
+            id: "apollo-graphql",
+            title: "Apollo GraphQL",
+            icon: "/apollo-graphql.png",
+          },
+          {
+            id: "docker",
+            title: "Docker",
+            icon: "/docker.png",
+          },
+          {
+            id: "python3",
+            title: "Python3",
+            icon: "/python3.png",
+          },
+          {
+            id: "django",
+            title: "Django",
+            icon: "/django.png",
+          },
+        ],
+      },
+      {
+        id: "databases",
+        title: "Database Technologies",
+        technologies: [
+          {
+            id: "postgresql",
+            title: "PostgreSQL",
+            icon: "/postgresql.png",
+          },
+          {
+            id: "sqlite",
+            title: "SQLite",
+            icon: "/sqlite.png",
+          },
+          {
+            id: "dynamodb",
+            title: "DynamoDB",
+            icon: "/dynamodb.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    class: "other",
+    title: "Other",
+    categories: [
+      {
+        id: "programming-languages",
+        title: "Programming Languages",
+        technologies: [
+          {
+            id: "typescript",
+            title: "TypeScript",
+            icon: "/typescript.png",
+          },
+          {
+            id: "javascript",
+            title: "JavaScript",
+            icon: "/javascript.png",
+          },
+          {
+            id: "python3",
+            title: "Python3",
+            icon: "/python3.png",
+          },
+          {
+            id: "c",
+            title: "C",
+            icon: "/c.png",
+          },
+          {
+            id: "perl",
+            title: "Perl",
+            icon: "/perl.png",
+          },
+        ],
+      },
+      {
+        id: "audio-visual-production",
+        title: "Audio Visual Production",
+        technologies: [
+          {
+            id: "logic-pro",
+            title: "Logic Pro X",
+            icon: "/logic-pro.png",
+          },
+          {
+            id: "final-cut-pro",
+            title: "Final Cut Pro X",
+            icon: "/final-cut-pro.png",
+          },
+          {
+            id: "adobe-audition",
+            title: "Adobe Audition",
+            icon: "/adobe-audition.png",
+          },
+          {
+            id: "blender",
+            title: "Blender",
+            icon: "/blender.png",
+          },
+        ],
+      },
+    ],
+  },
+];
+
 export const TechnologyData = [
   { id: "tbd", title: "TBD", icon: "" },
   {

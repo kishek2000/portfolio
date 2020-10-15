@@ -32,19 +32,18 @@ export function ProjectsSection() {
         css={mq({
           display: "flex",
           flexDirection: "column",
-          maxWidth: [computeGridSize(60), "none"],
+          width: "100%",
         })}
       >
         <p
           css={mq({
-            fontSize: [FONT_300, FONT_400, FONT_500],
+            fontSize: ["48px", FONT_500],
             fontFamily: "Work Sans",
             fontWeight: "bold",
             letterSpacing: ["3px", "5px"],
             color: "#DCE6FF",
             margin: 0,
             textAlign: "center",
-            width: ["95%", "100%"],
             whiteSpace: ["", "", "nowrap"],
           })}
         >
@@ -56,18 +55,21 @@ export function ProjectsSection() {
         <p
           css={mq({
             fontFamily: "Rubik",
-            fontSize: [FONT_100, FONT_150, FONT_200],
+            fontSize: [FONT_150, FONT_200],
             color: "white",
             margin: 0,
             textAlign: "center",
-            width: ["95%", "100%"],
             lineHeight: "1.5em",
           })}
         >
           Since the beginning of 2020, I have worked in personal
-          <br />
+          <span css={{ marginRight: ["3px", ""] }}>
+            <br css={mq({ display: ["none", "inline-block"] })} />
+          </span>
           and collaborative projects to produce impactful
-          <br />
+          <span css={{ marginRight: ["3px", ""] }}>
+            <br css={mq({ display: ["none", "inline-block"] })} />
+          </span>
           solutions for users.
         </p>
         <GapVertical times={21} />
@@ -78,7 +80,6 @@ export function ProjectsSection() {
             projects={period.projects}
           />
         ))}
-        <GapVertical times={24} />
       </div>
     </div>
   );
