@@ -202,10 +202,25 @@ export const QualificationData = [
             icon: "/typescript.png",
           },
           {
-            id: "aws",
-            title: "Amazon Web Services",
-            icon: "/aws.png",
+            id: "javascript",
+            title: "JavaScript",
+            icon: "/javascript.png",
           },
+          {
+            id: "flask",
+            title: "Flask",
+            icon: "/flask.png",
+          },
+          {
+            id: "express",
+            title: "Express",
+            icon: "/express.png",
+          },
+          // {
+          //   id: "aws",
+          //   title: "Amazon Web Services",
+          //   icon: "/aws.png",
+          // },
           {
             id: "apollo-graphql",
             title: "Apollo GraphQL",
