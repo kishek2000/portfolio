@@ -44,6 +44,9 @@ export function TimelineSection({ monthString, isParent, projects }) {
             projectInfo={project.projectInfo}
             link={project.link}
           />
+          {project.projectInfo.name === "Sadafal Education" && (
+            <GapVertical times={6} />
+          )}
         </>
       ))}
     </div>
