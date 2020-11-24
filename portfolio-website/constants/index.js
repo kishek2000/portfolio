@@ -86,6 +86,10 @@ export const Projects = [
           status: "discontinued",
           roles: ["Frontend Developer", "Project Lead"],
         },
+        link: {
+          title: "REPO >",
+          url: "https://github.com/kishek2000/transport-me",
+        },
       },
       {
         projNo: 2,
