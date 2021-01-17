@@ -111,6 +111,30 @@ export const Projects = [
       },
     ],
   },
+  {
+    month: "JAN 2021",
+    isParent: false,
+    projects: [
+      {
+        projNo: 1,
+        flipSide: true,
+        projectInfo: {
+          name: "GalacticEd",
+          slogan: "Helping children suffering from ASD to learn.",
+          description:
+            "GalacticEd is a web application prototype developed during the 2021 January Accenture Hackathon that serves as an intelligent platform that dynamically tailors learning plans for Autistic Kids",
+          frontend: ["nextjs", "react"],
+          designAndPrototyping: ["figma"],
+          status: "optimising",
+          roles: ["Frontend Developer"],
+        },
+        link: {
+          title: "REPO >",
+          url: "https://github.com/kishek2000/accentureHackathon",
+        },
+      },
+    ],
+  },
 ];
 
 export const QualificationData = [
@@ -122,6 +146,11 @@ export const QualificationData = [
         id: "frontend",
         title: "Frontend",
         technologies: [
+          {
+            id: "nextjs",
+            title: "NextJS",
+            icon: "/next.png",
+          },
           {
             id: "react",
             title: "React",
@@ -348,6 +377,11 @@ export const QualificationData = [
 
 export const TechnologyData = [
   { id: "tbd", title: "TBD", icon: "" },
+  {
+    id: "nextjs",
+    title: "NextJS",
+    icon: "/next.jpeg",
+  },
   {
     id: "react",
     title: "React",

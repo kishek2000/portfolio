@@ -7,6 +7,7 @@ import { computeGridSize } from "../styles/grid";
 import { mq } from "../styles/mq";
 
 export function TechnologyElement({ technology }) {
+  console.log(technology);
   const data = TechnologyData.filter((item) => {
     return item.id === technology;
   })[0];
@@ -19,7 +20,7 @@ export function TechnologyElement({ technology }) {
         marginBottom: "8px",
       }}
     >
-      {data.icon !== "" && (
+      {data && data.icon !== "" && (
         <>
           <img
             src={data.icon}
@@ -38,7 +39,7 @@ export function TechnologyElement({ technology }) {
           fontSize: [FONT_50, FONT_100],
         })}
       >
-        {data.title}
+        {data && data.title}
       </p>
     </div>
   );

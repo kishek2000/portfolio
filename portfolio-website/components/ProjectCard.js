@@ -51,7 +51,6 @@ export function ProjectCard({ flipSide, projNo, isParent, projectInfo, link }) {
           alignItems: "center",
           background:
             "linear-gradient(180deg, rgba(35, 35, 35) 50%, rgba(22.5, 22.5, 22.5) 100%);",
-
           borderRadius: 8,
           color: "white",
         })}
@@ -194,6 +193,7 @@ export function ProjectStatusPill({ style }) {
 }
 
 export function ProjectTechnologies({ projectInfo }) {
+  console.log(projectInfo);
   return (
     <div
       css={mq({
