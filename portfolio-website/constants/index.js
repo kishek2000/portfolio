@@ -149,7 +149,7 @@ export const QualificationData = [
           {
             id: "nextjs",
             title: "NextJS",
-            icon: "/next.png",
+            icon: "/next.jpeg",
           },
           {
             id: "react",
