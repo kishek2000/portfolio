@@ -122,7 +122,7 @@ export const Projects = [
           name: "GalacticEd",
           slogan: "Helping children suffering from ASD to learn.",
           description:
-            "GalacticEd is a web application prototype developed during the 2021 January Accenture Hackathon that serves as an intelligent platform that dynamically tailors learning plans for Autistic Kids",
+            "GalacticEd is a web application prototype awarded 1st Place during the 2021 January Accenture Hackathon that serves as an intelligent platform that dynamically tailors learning plans for Autistic Kids",
           frontend: ["nextjs", "react"],
           designAndPrototyping: ["figma"],
           status: "optimising",
