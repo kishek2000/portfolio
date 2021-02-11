@@ -254,11 +254,11 @@ export const QualificationData = [
             title: "Apollo GraphQL",
             icon: "/apollo-graphql.png",
           },
-          // {
-          //   id: "docker",
-          //   title: "Docker",
-          //   icon: "/docker.png",
-          // },
+          {
+            id: "docker",
+            title: "Docker",
+            icon: "/docker.png",
+          },
           {
             id: "python3",
             title: "Python3",
