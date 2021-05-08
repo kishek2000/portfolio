@@ -37,7 +37,6 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
           flexDirection: "row",
           flexWrap: "wrap",
           width: "100%",
-          gridGap: "8%",
         }}
       >
         {skills.technologies.map((tech) => (
@@ -46,7 +45,7 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
-              padding: "4px 0px",
+              padding: "4px",
             }}
           >
             <img

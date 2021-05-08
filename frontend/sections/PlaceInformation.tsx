@@ -79,7 +79,6 @@ export const PlaceInformation: FC<PlaceInformationProps> = ({ place }) => {
         <div
           css={mq({
             display: "flex",
-            gridGap: "1.5%",
             width: "100%",
             alignItems: "flex-start",
             flexDirection: ["column", "row", "row"],
@@ -87,7 +86,6 @@ export const PlaceInformation: FC<PlaceInformationProps> = ({ place }) => {
           })}
         >
           <PlaceSkills skills={information[0].skills[0]} />
-
           {information[0].skills.length > 1 && (
             <Fragment>
               <div

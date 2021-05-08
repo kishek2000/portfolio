@@ -73,7 +73,6 @@ export const Projects = () => {
           css={mq({
             display: "flex",
             flexDirection: "row",
-            gridGap: ["25%", "5%", "5%"],
             width: "100%",
             alignItems: "center",
             overflowX: ["auto", "hidden", "hidden"],
@@ -100,6 +99,7 @@ export const Projects = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   position: "relative",
+                  marginRight: ["48px", "60px", "80px"],
                 })}
                 key={index}
               >

@@ -33,6 +33,7 @@ export const Contact = () => {
             fontSize: FONT_175,
             margin: 0,
             textAlign: "center",
+            width: "95%",
           }}
         >
           Contact me anytime at kishek12@gmail.com and I'll get back to you as
