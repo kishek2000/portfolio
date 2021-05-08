@@ -73,6 +73,7 @@ export const TechnicalSkills = () => {
             display: "flex",
             flexDirection: "column",
             padding: "68px 0px",
+            flexWrap: "wrap",
           }}
         >
           {qualifications.map((category, index) => (
@@ -91,17 +92,24 @@ export const TechnicalSkills = () => {
                   flexWrap: "wrap",
                 }}
               >
-                {category.categories.map((nestedCategory, nestedIndex) => (
+                {category.categories.map((nestedCategory) => (
                   <div
                     css={{
                       display: "flex",
                       flexDirection: "column",
                       marginBottom: "16px",
-                      width: "47.5%",
+                      width: "48.5%",
+                      flexWrap: "wrap",
                     }}
                     key={nestedCategory.id}
                   >
-                    <p css={{ margin: 0, fontWeight: 500, fontSize: FONT_175 }}>
+                    <p
+                      css={mq({
+                        margin: 0,
+                        fontWeight: 500,
+                        fontSize: [FONT_150, FONT_175, FONT_175],
+                      })}
+                    >
                       {nestedCategory.title}
                     </p>
                     <GapVertical times={4} />
@@ -132,6 +140,7 @@ export const TechnicalSkills = () => {
                             key={technology.id}
                           >
                             <img
+                              loading="lazy"
                               src={technology.icon}
                               css={{
                                 width: "28px",

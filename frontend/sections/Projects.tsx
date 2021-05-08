@@ -121,6 +121,7 @@ export const Projects = () => {
                 >
                   <img
                     src={project.thumbnail}
+                    loading="lazy"
                     css={{
                       borderRadius: "24px 24px 0px 0px",
                       height: "100%",
@@ -238,6 +239,7 @@ export const Projects = () => {
                         >
                           <img
                             src={link.icon}
+                            loading="lazy"
                             css={{
                               width: "14px",
                               height: "14px",

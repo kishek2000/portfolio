@@ -54,6 +54,7 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
                 height: ["24px", "26px", "30px"],
                 objectFit: "contain",
               })}
+              loading="lazy"
               src={tech.icon}
             />
             <GapHorizontal times={2} />

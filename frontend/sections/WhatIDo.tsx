@@ -91,6 +91,7 @@ export const WhatIDo = () => {
                 <img
                   css={{ width: "40%", objectFit: "contain" }}
                   src={service.image}
+                  loading="lazy"
                 />
                 <GapVertical times={9} />
                 <h4 css={{ fontSize: FONT_200, margin: 0 }}>{service.title}</h4>
