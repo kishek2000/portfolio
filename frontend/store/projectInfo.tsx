@@ -116,7 +116,7 @@ export const projects: ProjectModel[] = [
     title: "Concentrum",
     subtitle: "Explore disease and outbreak info seamlessly.",
     desc:
-      "Concentrum is a platform that gives a vast widget library and ability to create and share screens for corporate, government and personal use in disease outbreak info.",
+      "Concentrum provides a vast widget library and ability to create and share screens for various user in disease outbreak info.",
     roles: ["Full Stack Developer"],
     timePeriod: "Feb - Apr 2021",
     skills: [

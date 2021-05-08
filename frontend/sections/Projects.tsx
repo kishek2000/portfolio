@@ -90,7 +90,7 @@ export const Projects = () => {
                     "linear-gradient(180deg, #242424 0%, #1D1D1D 100%);",
                   borderRadius: "24px",
                   minWidth: ["100%", "460px", "480px"],
-                  height: ["640px", "690px", "800px"],
+                  height: ["600px", "690px", "800px"],
                   flexDirection: "column",
                   alignItems: "center",
                   position: "relative",
@@ -212,6 +212,9 @@ export const Projects = () => {
                       flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "flex-end",
+                      position: "absolute",
+                      bottom: "36px",
+                      right: "36px",
                     }}
                   >
                     {project.links.map((link, index) => (
