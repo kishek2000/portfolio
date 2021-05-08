@@ -106,7 +106,7 @@ export const projects: ProjectModel[] = [
       {
         title: "live demo",
         icon: "repository.png",
-        link: "https://concentrum-m6umdhxmd-seng3011sourdough.vercel.app/",
+        link: "https://galactic-ed.xyz/",
       },
     ],
     startDate: new Date("01/13/2021"),
