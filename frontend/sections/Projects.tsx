@@ -207,15 +207,15 @@ export const Projects = () => {
                   </div>
                   <GapVertical times={6} />
                   <div
-                    css={{
+                    css={mq({
                       display: "flex",
                       flexDirection: "row",
                       alignItems: "center",
                       justifyContent: "flex-end",
                       position: "absolute",
-                      bottom: "36px",
-                      right: "36px",
-                    }}
+                      bottom: ["16px", "36px", "36px"],
+                      right: ["16px", "36px", "36px"],
+                    })}
                   >
                     {project.links.map((link, index) => (
                       <Fragment key={index}>
