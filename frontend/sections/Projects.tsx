@@ -16,11 +16,6 @@ import { PlaceSkills } from "./PlaceSkills";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export const Projects = () => {
-  console.log(
-    projects.sort((a, b) =>
-      a.startDate.getTime() < b.startDate.getTime() ? 1 : -1
-    )
-  );
   return (
     <section
       css={{
