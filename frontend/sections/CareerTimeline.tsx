@@ -25,7 +25,8 @@ export const CareerTimeline = () => {
         gridTemplateColumns: "75%",
         justifyContent: "center",
         textAlign: "left",
-        minHeight: "65vh",
+        height: "100vh",
+        marginBottom: "-100px",
       }}
     >
       <div
@@ -85,6 +86,7 @@ export const CareerTimeline = () => {
             justifyContent: "center",
             height: "70%",
             width: "100%",
+            marginTop: "-24px",
           })}
         >
           <div

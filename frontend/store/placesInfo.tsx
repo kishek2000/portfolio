@@ -13,7 +13,7 @@ export const placesInfo: PlaceModel[] = [
     timePeriod: "FEB 2021 - NOW",
     role: "Digital Networks Automation Intern",
     desc:
-      "Full Stack Developer working on the creation and optimisation of automation tools on an internal application, increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from senior to principal level network engineers and technical specialists.",
+      "Full Stack Developer working on the creation and optimisation of automation tools increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
     skills: [
       {
         title: "Web Development",
@@ -213,7 +213,7 @@ export const placesInfo: PlaceModel[] = [
     timePeriod: "DEC 2018 - AUG 2019",
     role: "Volunteer, Social Presence, Media Production",
     desc:
-      "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We grew a social presence of over 10,000 followers across mainstream social media to invite individuals to experience the Kumbh Mela with us. Throughout the campaign, I also worked on the composition of video soundtracks and lead the scripting, music and visual production of a retrospective thirty minute documentary.",
+      "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We reached over 10,000 followers across mainstream social media in inviting individuals to visit the Kumbh Mela with us. Throughout the campaign, also worked on the composition of video soundtracks and lead the scripting, music and visual production of our thirty minute documentary.",
     skills: [
       {
         title: "Media Production",

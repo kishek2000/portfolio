@@ -46,6 +46,7 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
               flexDirection: "row",
               alignItems: "center",
               padding: "4px",
+              marginRight: "12px",
             }}
           >
             <img
