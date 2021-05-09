@@ -59,13 +59,12 @@ export const TechnicalSkills = () => {
       <GapVertical times={18} />
       <div
         css={{
-          width: "110%",
+          width: "100%",
           background: "linear-gradient(180deg, #242424 0%, #1D1D1D 100%);",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           borderRadius: "8px",
-          marginLeft: "-5%",
         }}
       >
         <div
