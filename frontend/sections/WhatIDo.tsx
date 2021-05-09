@@ -2,7 +2,13 @@
 
 import Particles from "react-particles-js";
 import { GapVertical } from "../components/GapVertical";
-import { FONT_200, FONT_400, FONT_175 } from "../styles/fonts";
+import {
+  FONT_200,
+  FONT_400,
+  FONT_175,
+  FONT_300,
+  FONT_150,
+} from "../styles/fonts";
 import { mq } from "../styles/mq";
 
 export const WhatIDo = () => {
@@ -39,13 +45,19 @@ export const WhatIDo = () => {
           />
         </div>
         <GapVertical times={4} />
-        <h1 css={{ fontSize: FONT_400, margin: 0 }}>
+        <h1 css={mq({ fontSize: [FONT_300, FONT_300, FONT_400], margin: 0 })}>
           I aspire to create world-class,
           <br />
           customer centric user experiences.
         </h1>
         <GapVertical times={4} />
-        <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
+        <p
+          css={mq({
+            fontWeight: 300,
+            fontSize: [FONT_150, FONT_150, FONT_175],
+            margin: 0,
+          })}
+        >
           Since Jan 2020, I have worked on a variety of problems with a
           customer-centric mindset,
           <br />
@@ -139,6 +151,6 @@ export const CoreServices: CoreService[] = [
     title: "DevOps",
     image: "/devops.png",
     desc:
-      "Throughout my career thusfar, I have gained proficiency in build pipelines, as well as automation and maintenance as a whole.",
+      "Throughout my career thus far, I have gained proficiency in build pipelines, as well as automation and maintenance as a whole.",
   },
 ];

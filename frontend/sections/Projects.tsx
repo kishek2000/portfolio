@@ -293,7 +293,7 @@ export const Projects = () => {
               justifyContent: "space-between",
               width: ["95vw", "95vw", "85vw"],
               position: "absolute",
-              left: ["-10vw", "-10vw", "-5vw"],
+              left: ["-11vw", "-10vw", "-5vw"],
               top: "50%",
             })}
           >

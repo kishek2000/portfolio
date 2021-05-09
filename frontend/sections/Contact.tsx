@@ -1,7 +1,14 @@
 /** @jsxImportSource @emotion/react */
 
 import { GapVertical } from "../components/GapVertical";
-import { FONT_175, FONT_400 } from "../styles/fonts";
+import {
+  FONT_150,
+  FONT_175,
+  FONT_250,
+  FONT_300,
+  FONT_400,
+} from "../styles/fonts";
+import { mq } from "../styles/mq";
 
 export const Contact = () => {
   return (
@@ -23,18 +30,24 @@ export const Contact = () => {
           alignItems: "center",
         }}
       >
-        <h1 css={{ margin: 0, textAlign: "center", fontSize: FONT_400 }}>
-          Interested to work together?
+        <h1
+          css={mq({
+            margin: 0,
+            textAlign: "center",
+            fontSize: [FONT_250, FONT_250, FONT_400],
+          })}
+        >
+          Interested in working together?
         </h1>
         <GapVertical times={4} />
         <p
-          css={{
+          css={mq({
             fontWeight: 300,
-            fontSize: FONT_175,
+            fontSize: [FONT_150, FONT_175, FONT_175],
             margin: 0,
             textAlign: "center",
             width: "95%",
-          }}
+          })}
         >
           Contact me anytime at kishek12@gmail.com and I'll get back to you as
           soon as I can!

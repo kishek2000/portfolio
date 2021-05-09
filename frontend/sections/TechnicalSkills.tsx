@@ -9,6 +9,7 @@ import {
   FONT_175,
   FONT_200,
   FONT_250,
+  FONT_300,
   FONT_400,
 } from "../styles/fonts";
 import { mq } from "../styles/mq";
@@ -47,16 +48,22 @@ export const TechnicalSkills = () => {
           />
         </div>
         <GapVertical times={4} />
-        <h1 css={{ fontSize: FONT_400, margin: 0 }}>
+        <h1 css={mq({ fontSize: [FONT_300, FONT_300, FONT_400], margin: 0 })}>
           Technologies learned throughout my career.
         </h1>
         <GapVertical times={4} />
-        <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
+        <p
+          css={mq({
+            fontWeight: 300,
+            fontSize: [FONT_150, FONT_150, FONT_175],
+            margin: 0,
+          })}
+        >
           These are the key technologies that I have worked with and gained
           proficiency with across my career to this date.
         </p>
       </div>
-      <GapVertical times={18} />
+      <GapVertical times={12} />
       <div
         css={{
           width: "100%",

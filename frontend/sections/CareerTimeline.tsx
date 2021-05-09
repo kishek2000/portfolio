@@ -2,7 +2,13 @@
 
 import { useState } from "react";
 import { GapVertical } from "../components/GapVertical";
-import { FONT_150, FONT_175, FONT_200, FONT_400 } from "../styles/fonts";
+import {
+  FONT_150,
+  FONT_175,
+  FONT_200,
+  FONT_300,
+  FONT_400,
+} from "../styles/fonts";
 import { mq } from "../styles/mq";
 import { places } from "../store/placesInfo";
 import { PlaceInformation } from "./PlaceInformation";
@@ -56,11 +62,17 @@ export const CareerTimeline = () => {
           />
         </h3>
         <GapVertical times={4} />
-        <h1 css={{ fontSize: FONT_400, margin: 0 }}>
+        <h1 css={mq({ fontSize: [FONT_300, FONT_300, FONT_400], margin: 0 })}>
           A look at the current timeline of my career.
         </h1>
         <GapVertical times={4} />
-        <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
+        <p
+          css={mq({
+            fontWeight: 300,
+            fontSize: [FONT_150, FONT_150, FONT_175],
+            margin: 0,
+          })}
+        >
           View details of my contributions in different industry and
           volunteering environments:
         </p>
