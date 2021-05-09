@@ -16,6 +16,14 @@ import Particles from "react-particles-js";
 import { useEffect, useState } from "react";
 
 export const SiteHeader = () => {
+  const [particles, setParticles] = useState(70);
+
+  useEffect(() => {
+    if (window.innerWidth <= 720) {
+      setParticles(40);
+    }
+  });
+
   return (
     <header
       css={{
@@ -78,7 +86,7 @@ export const SiteHeader = () => {
           params={{
             particles: {
               number: {
-                value: 75,
+                value: particles,
               },
               size: {
                 value: 3,

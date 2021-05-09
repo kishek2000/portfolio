@@ -44,7 +44,7 @@ export const WhatIDo = () => {
           <br />
           customer centric user experiences.
         </h1>
-        <GapVertical times={9} />
+        <GapVertical times={4} />
         <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
           Since Jan 2020, I have worked on a variety of problems with a
           customer-centric mindset,

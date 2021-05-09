@@ -58,7 +58,7 @@ export const CareerTimeline = () => {
         <h1 css={{ fontSize: FONT_400, margin: 0 }}>
           A look at the current timeline of my career.
         </h1>
-        <GapVertical times={9} />
+        <GapVertical times={4} />
         <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
           View details of my contributions in different industry and
           volunteering environments:

@@ -50,7 +50,7 @@ export const TechnicalSkills = () => {
         <h1 css={{ fontSize: FONT_400, margin: 0 }}>
           Technologies learned throughout my career.
         </h1>
-        <GapVertical times={9} />
+        <GapVertical times={4} />
         <p css={{ fontWeight: 300, fontSize: FONT_175, margin: 0 }}>
           These are the key technologies that I have worked with and gained
           proficiency with across my career to this date.
@@ -59,12 +59,13 @@ export const TechnicalSkills = () => {
       <GapVertical times={18} />
       <div
         css={{
-          width: "100%",
+          width: "110%",
           background: "linear-gradient(180deg, #242424 0%, #1D1D1D 100%);",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           borderRadius: "8px",
+          marginLeft: "-5%",
         }}
       >
         <div
@@ -92,13 +93,13 @@ export const TechnicalSkills = () => {
                   flexWrap: "wrap",
                 }}
               >
-                {category.categories.map((nestedCategory) => (
+                {category.categories.map((nestedCategory, nestedIndex) => (
                   <div
                     css={{
                       display: "flex",
                       flexDirection: "column",
                       marginBottom: "16px",
-                      width: "48.5%",
+                      width: nestedIndex % 2 === 0 ? "55%" : "45%",
                       flexWrap: "wrap",
                     }}
                     key={nestedCategory.id}

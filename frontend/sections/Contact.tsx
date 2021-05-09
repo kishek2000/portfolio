@@ -11,9 +11,9 @@ export const Contact = () => {
         height: "30vh",
         background: "#0A0A0A",
         color: "white",
+        paddingBottom: "72px",
       }}
     >
-      {/* <GapVertical times={60} /> */}
       <div
         css={{
           display: "flex",
@@ -26,7 +26,7 @@ export const Contact = () => {
         <h1 css={{ margin: 0, textAlign: "center", fontSize: FONT_400 }}>
           Interested to work together?
         </h1>
-        <GapVertical times={9} />
+        <GapVertical times={4} />
         <p
           css={{
             fontWeight: 300,

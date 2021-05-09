@@ -121,7 +121,7 @@ export const projects: ProjectModel[] = [
     timePeriod: "Feb - Apr 2021",
     skills: [
       {
-        title: "Web Development",
+        title: "Web Development & Devops",
         technologies: [
           {
             title: "React",
@@ -139,17 +139,12 @@ export const projects: ProjectModel[] = [
             title: "MongoDB",
             icon: "mongodb.png",
           },
-        ],
-      },
-      {
-        title: "DevOps",
-        technologies: [
           {
-            title: "EC2, ECR and ECS",
+            title: "EC2, ECR, ECS",
             icon: "/aws.png",
           },
           {
-            title: "Github, Github Actions",
+            title: "Github",
             icon: "/github.png",
           },
         ],
