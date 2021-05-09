@@ -4,6 +4,7 @@ export const places = [
   "Sadafal Education",
   "Vihangam Yoga",
   "Sukrit Life",
+  "Kumbh Sukrit",
 ];
 
 export const placesInfo: PlaceModel[] = [
@@ -192,9 +193,9 @@ export const placesInfo: PlaceModel[] = [
   {
     place: "Sukrit Life",
     timePeriod: "JAN 2017 - NOW",
-    role: "Media Production, Full Stack Developer, UI Designer",
+    role: "Volunteer, Media Production, UI Designer",
     desc:
-      "Media Production, marketing, design and developer focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues.",
+      "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Coming soon in 2021-22.",
     skills: [
       {
         title: "Web Design",
@@ -202,6 +203,32 @@ export const placesInfo: PlaceModel[] = [
           {
             title: "Sketch",
             icon: "sketch.png",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    place: "Kumbh Sukrit",
+    timePeriod: "DEC 2018 - AUG 2019",
+    role: "Volunteer, Social Presence, Media Production",
+    desc:
+      "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We grew a social presence of over 10,000 followers across mainstream social media to invite individuals to experience the Kumbh Mela with us. Throughout the campaign, I also worked on the composition of video soundtracks and lead the scripting, music and visual production of a retrospective thirty minute documentary.",
+    skills: [
+      {
+        title: "Media Production",
+        technologies: [
+          {
+            title: "Adobe Audition",
+            icon: "adobe-audition.png",
+          },
+          {
+            title: "Final Cut Pro X",
+            icon: "final-cut-pro.png",
+          },
+          {
+            title: "Logic Pro X",
+            icon: "logic-pro.png",
           },
         ],
       },
