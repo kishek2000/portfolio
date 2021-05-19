@@ -77,7 +77,7 @@ export const CareerTimeline = () => {
           View details of my contributions in different industry and
           volunteering environments:
         </p>
-        <div css={mq({ marginBottom: ["24px", "48px", "48px"] })} />
+        <GapVertical times={12} />
         <div
           css={mq({
             display: "flex",
@@ -89,6 +89,7 @@ export const CareerTimeline = () => {
             marginTop: "-24px",
           })}
         >
+          <p css={{fontSize: "16px", display: ["flex", "none", "none"]}}>Select from my work areas:<p/>
           <div
             css={mq({
               width: "95%",
