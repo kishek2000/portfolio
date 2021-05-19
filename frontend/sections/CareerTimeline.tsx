@@ -89,7 +89,7 @@ export const CareerTimeline = () => {
             marginTop: "-24px",
           })}
         >
-          <p css={{fontSize: "16px", display: ["flex", "none", "none"]}}>Select from my work areas:<p/>
+          <p css={mq({fontSize: "16px", display: ["flex", "none", "none"]})}>Select from my work areas:<p/>
           <div
             css={mq({
               width: "95%",
