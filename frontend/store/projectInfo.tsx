@@ -98,15 +98,20 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: [
+      // {
+      //   title: "repository",
+      //   icon: "github.png",
+      //   link: "https://github.com/kishek2000/accentureHackathon",
+      // },
+      // {
+      //   title: "live demo",
+      //   icon: "repository.png",
+      //   link: "https://galactic-ed.xyz/",
+      // },
       {
-        title: "repository",
-        icon: "github.png",
-        link: "https://github.com/kishek2000/accentureHackathon",
-      },
-      {
-        title: "live demo",
+        title: "Hackathon Pitch",
         icon: "repository.png",
-        link: "https://galactic-ed.xyz/",
+        link: "https://www.youtube.com/watch?v=uWQ4hUP4L0k",
       },
     ],
     startDate: new Date("01/13/2021"),
