@@ -48,6 +48,7 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
               padding: "4px",
               marginRight: "12px",
             }}
+            key={tech.title}
           >
             <img
               css={mq({

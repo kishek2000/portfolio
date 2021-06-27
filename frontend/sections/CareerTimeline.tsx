@@ -12,6 +12,7 @@ import {
 import { mq } from "../styles/mq";
 import { places } from "../store/placesInfo";
 import { PlaceInformation } from "./PlaceInformation";
+import { Fragment } from "react";
 
 export const CareerTimeline = () => {
   const [selectedPlace, setSelectedPlace] = useState(places[0]);
@@ -89,7 +90,9 @@ export const CareerTimeline = () => {
             marginTop: "-24px",
           })}
         >
-          <p css={mq({fontSize: "16px", display: ["flex", "none", "none"]})}>Select from my work areas:</p>
+          <p css={mq({ fontSize: "16px", display: ["flex", "none", "none"] })}>
+            Select from my work areas:
+          </p>
           <div
             css={mq({
               width: "95%",
@@ -144,7 +147,7 @@ export const CareerTimeline = () => {
               })}
             >
               {places.map((place, index) => (
-                <>
+                <Fragment key={place}>
                   <div
                     key={index}
                     css={mq({
@@ -178,7 +181,7 @@ export const CareerTimeline = () => {
                       <div css={mq({ marginRight: ["36px", "0", "0"] })} />
                     </>
                   ) : null}
-                </>
+                </Fragment>
               ))}
             </div>
             <div css={mq({ marginRight: ["0px", "80px", "80px"] })} />
