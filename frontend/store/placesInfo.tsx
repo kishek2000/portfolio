@@ -10,10 +10,9 @@ export const places = [
 export const placesInfo: PlaceModel[] = [
   {
     place: "Optus",
-    timePeriod: "FEB 2021 - NOW",
+    timePeriod: "FEB 2021 - AUG 2021",
     role: "Digital Networks Automation Intern",
-    desc:
-      "Full Stack Developer working on the creation and optimisation of automation tools increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
+    desc: "Full Stack Developer working on the creation and optimisation of automation tools increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
     skills: [
       {
         title: "Web Development",
@@ -75,8 +74,7 @@ export const placesInfo: PlaceModel[] = [
     place: "Accenture",
     timePeriod: "JAN 2021 - NOW",
     role: "Full Stack Developer (Sponsored Project)",
-    desc:
-      "Full Stack Developer working on an intelligent education platform for children who have ASD. Focused on providing dynamically tailored content with detailed analysis and guidance for parents. In collaboration with Autism Awareness.",
+    desc: "Full Stack Developer working on an intelligent education platform for children who have ASD. Focused on providing dynamically tailored content with detailed analysis and guidance for parents. In collaboration with Autism Awareness.",
     skills: [
       {
         title: "Web Development",
@@ -109,8 +107,7 @@ export const placesInfo: PlaceModel[] = [
     place: "Sadafal Education",
     timePeriod: "APR 2020 - NOW",
     role: "Full Stack Developer, UI Designer",
-    desc:
-      "Range of work from maintaining global website with redesign and development currently in progress, to collaborating on the development of a global education platform tailored to anyone who wants to master their passion.",
+    desc: "Range of work from maintaining global website with redesign and development currently in progress, to collaborating on the development of a global education platform tailored to anyone who wants to master their passion.",
     skills: [
       {
         title: "Web Design and Development",
@@ -160,8 +157,7 @@ export const placesInfo: PlaceModel[] = [
     place: "Vihangam Yoga",
     timePeriod: "FEB 2018 - NOW",
     role: "Volunteer, Full Stack Developer, UI Designer",
-    desc:
-      "Range of work focused on assisting in the design and development of applications that provide an effective medium for individuals interested in meditation and spirituality, to understand and learn more about the science of spirituality.",
+    desc: "Range of work focused on assisting in the design and development of applications that provide an effective medium for individuals interested in meditation and spirituality, to understand and learn more about the science of spirituality.",
     skills: [
       {
         title: "Web Design and Development",
@@ -192,10 +188,9 @@ export const placesInfo: PlaceModel[] = [
   },
   {
     place: "Sukrit Life",
-    timePeriod: "JAN 2017 - NOW",
+    timePeriod: "JAN 2017 - JAN 2020",
     role: "Volunteer, Media Production, UI Designer",
-    desc:
-      "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Coming soon in 2021-22.",
+    desc: "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Coming soon in 2021-22.",
     skills: [
       {
         title: "Web Design",
@@ -212,8 +207,7 @@ export const placesInfo: PlaceModel[] = [
     place: "Kumbh Sukrit",
     timePeriod: "DEC 2018 - AUG 2019",
     role: "Volunteer, Social Presence, Media Production",
-    desc:
-      "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We reached over 10,000 followers across mainstream social media in inviting individuals to visit the Kumbh Mela with us. Throughout the campaign, also worked on the composition of video soundtracks and lead the scripting, music and visual production of our thirty minute documentary.",
+    desc: "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We reached over 10,000 followers across mainstream social media in inviting individuals to visit the Kumbh Mela with us. Throughout the campaign, also worked on the composition of video soundtracks and lead the scripting, music and visual production of our thirty minute documentary.",
     skills: [
       {
         title: "Media Production",
