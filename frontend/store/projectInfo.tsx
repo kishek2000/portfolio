@@ -24,8 +24,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/mylounge.png",
     title: "myLounge",
     subtitle: "Listen. Watch. Relax.",
-    desc:
-      "myLounge is a digital lounge that allows users to browse and/or filter TV Shows, Movies, Podcasts and Music, and immediately find a list of streaming services for a chosen media option!",
+    desc: "myLounge is a digital lounge that allows users to browse and/or filter TV Shows, Movies, Podcasts and Music, and immediately find a list of streaming services for a chosen media option!",
     roles: ["Full Stack Developer", "Project Lead"],
     timePeriod: "Feb - Apr 2020",
     skills: [
@@ -65,8 +64,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/galacticed.png",
     title: "GalacticEd",
     subtitle: "Empower your child's learning.",
-    desc:
-      "GalacticEd is an intelligent education platform that tailors content dynamically for children who have ASD.",
+    desc: "GalacticEd is an intelligent education platform that tailors content dynamically for children who have ASD.",
     roles: ["Full Stack Developer"],
     timePeriod: "Jan 2021 - Now",
     skills: [
@@ -81,18 +79,21 @@ export const projects: ProjectModel[] = [
             title: "Emotion CSS",
             icon: "css.png",
           },
-
           {
             title: "Typescript",
             icon: "typescript.png",
           },
           {
-            title: "Flask",
-            icon: "flask.png",
+            title: "Apollo GraphQL",
+            icon: "/apollo-graphql.png",
           },
           {
             title: "MongoDB",
             icon: "mongodb.png",
+          },
+          {
+            title: "Express",
+            icon: "express.png",
           },
         ],
       },
@@ -120,8 +121,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/concentrum.png",
     title: "Concentrum",
     subtitle: "Explore disease and outbreak info seamlessly.",
-    desc:
-      "Concentrum provides a vast widget library and ability to create and share screens for various user in disease outbreak info.",
+    desc: "Concentrum provides a vast widget library and ability to create and share screens for various user in disease outbreak info.",
     roles: ["Full Stack Developer"],
     timePeriod: "Feb - Apr 2021",
     skills: [
@@ -173,8 +173,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/transportme.png",
     title: "transport.me",
     subtitle: "Manage all your travel needs.",
-    desc:
-      "transport.me is a mobile application that removes the need for you to have multiple applications, and manage all your travel needs.",
+    desc: "transport.me is a mobile application that removes the need for you to have multiple applications, and manage all your travel needs.",
     roles: ["Full Stack Developer"],
     timePeriod: "Jun - Aug 2020",
     skills: [
@@ -219,8 +218,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/discovery.png",
     title: "Discovery",
     subtitle: "Learning made fun.",
-    desc:
-      "Discovery is a platform that makes children's education fun and engaging, covering interesting areas of content about the world! Powered by Sadafal Education.",
+    desc: "Discovery is a platform that makes children's education fun and engaging, covering interesting areas of content about the world! Powered by Sadafal Education.",
     roles: ["Frontend Developer, Project Lead"],
     timePeriod: "May 2020",
     skills: [
@@ -256,8 +254,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/se.png",
     title: "Sadafal Education",
     subtitle: "Discover, Learn and Master your passion.",
-    desc:
-      "Sadafal Education is an aspiring global education provider that helps individuals to discover, learn and master their passion.",
+    desc: "Sadafal Education is an aspiring global education provider that helps individuals to discover, learn and master their passion.",
     roles: ["Full Stack Developer, UI Designer"],
     timePeriod: "Jun 2020 - Now",
     skills: [
@@ -301,8 +298,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/kp.png",
     title: "knowledge.path",
     subtitle: "Anyone can learn.",
-    desc:
-      "knowledge.path is an education platform releasing mid-late 2021. With their own path, anyone can be employed in their passion. Powered by Sadafal Education.",
+    desc: "knowledge.path is an education platform releasing mid-late 2021. With their own path, anyone can be employed in their passion. Powered by Sadafal Education.",
     roles: ["Full Stack Developer, UI Designer"],
     timePeriod: "Jul 2020 - Now",
     skills: [

@@ -96,8 +96,8 @@ export const placesInfo: PlaceModel[] = [
             icon: "mongodb.png",
           },
           {
-            title: "Python",
-            icon: "python3.png",
+            title: "Apollo GraphQL",
+            icon: "apollo-graphql.png",
           },
         ],
       },
