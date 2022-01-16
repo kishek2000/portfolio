@@ -10,7 +10,7 @@ export const places = [
 export const placesInfo: PlaceModel[] = [
   {
     place: "Optus",
-    timePeriod: "FEB 2021 - AUG 2021",
+    timePeriod: "Feb 2021 - Aug 2021",
     role: "Digital Networks Automation Intern",
     desc: "Full Stack Developer working on the creation and optimisation of automation tools increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
     skills: [
@@ -71,10 +71,10 @@ export const placesInfo: PlaceModel[] = [
     ],
   },
   {
-    place: "Accenture",
-    timePeriod: "JAN 2021 - NOW",
-    role: "Full Stack Developer (Sponsored Project)",
-    desc: "Full Stack Developer working on an intelligent education platform for children who have ASD. Focused on providing dynamically tailored content with detailed analysis and guidance for parents. In collaboration with Autism Awareness.",
+    place: "Accenture & Autism Awareness",
+    timePeriod: "Jan 2021 - Present",
+    role: "Full Stack Developer",
+    desc: "Passion project sponsored by Accenture. Full Stack Developer working in a team on an intelligent education platform for children who have ASD. Focused on providing dynamically tailored content with detailed analysis and guidance for parents. In collaboration with Autism Awareness.",
     skills: [
       {
         title: "Web Development",
@@ -88,16 +88,34 @@ export const placesInfo: PlaceModel[] = [
             icon: "typescript.png",
           },
           {
-            title: "Express",
-            icon: "express.png",
+            title: "Apollo Graphql, Express",
+            icon: "apollo-graphql.png",
           },
           {
             title: "MongoDB",
             icon: "mongodb.png",
           },
+        ],
+      },
+      {
+        title: "Design",
+        technologies: [
           {
-            title: "Apollo GraphQL",
-            icon: "apollo-graphql.png",
+            title: "Figma",
+            icon: "figma.png",
+          },
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          {
+            title: "Docker",
+            icon: "docker.png",
+          },
+          {
+            title: "ECR, ECS",
+            icon: "/ecs.png",
           },
         ],
       },
@@ -105,7 +123,7 @@ export const placesInfo: PlaceModel[] = [
   },
   {
     place: "Sadafal Education",
-    timePeriod: "APR 2020 - NOW",
+    timePeriod: "Apr 2020 - Present",
     role: "Full Stack Developer, UI Designer",
     desc: "Range of work from maintaining global website with redesign and development currently in progress, to collaborating on the development of a global education platform tailored to anyone who wants to master their passion.",
     skills: [
@@ -155,7 +173,7 @@ export const placesInfo: PlaceModel[] = [
   },
   {
     place: "Vihangam Yoga",
-    timePeriod: "FEB 2018 - NOW",
+    timePeriod: "Feb 2018 - Present",
     role: "Volunteer, Full Stack Developer, UI Designer",
     desc: "Range of work focused on assisting in the design and development of applications that provide an effective medium for individuals interested in meditation and spirituality, to understand and learn more about the science of spirituality.",
     skills: [
@@ -187,14 +205,27 @@ export const placesInfo: PlaceModel[] = [
     ],
   },
   {
-    place: "Sukrit Life",
-    timePeriod: "JAN 2017 - JAN 2020",
+    place: "Evergrowing",
+    timePeriod: "Jan 2017 - Present",
     role: "Volunteer, Media Production, UI Designer",
-    desc: "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Coming soon in 2021-22.",
+    desc: "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Collaborating on development of meditation mobile app coming soon.",
     skills: [
       {
-        title: "Web Design",
+        title: "Mobile App Development",
         technologies: [
+          {
+            title: "Expo",
+            icon: "expo.png",
+          },
+        ],
+      },
+      {
+        title: "Web and Mobile App Design",
+        technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
           {
             title: "Sketch",
             icon: "sketch.png",
@@ -205,7 +236,7 @@ export const placesInfo: PlaceModel[] = [
   },
   {
     place: "Kumbh Sukrit",
-    timePeriod: "DEC 2018 - AUG 2019",
+    timePeriod: "Dec 2018 - Aug 2019",
     role: "Volunteer, Social Presence, Media Production",
     desc: "Kumbh Sukrit is a globally recognised travel company providing experiences of Ancient India. We reached over 10,000 followers across mainstream social media in inviting individuals to visit the Kumbh Mela with us. Throughout the campaign, also worked on the composition of video soundtracks and lead the scripting, music and visual production of our thirty minute documentary.",
     skills: [

@@ -9,87 +9,77 @@ import {
   FONT_175,
   FONT_300,
   FONT_150,
+  HEADING_FAMILY,
+  PARAGRAPH_FAMILY,
 } from "../styles/fonts";
 import { mq } from "../styles/mq";
+
+const colors = ["#5a88ff", "#ff9898", "#89ff7e"];
 
 export const WhatIDo = () => {
   return (
     <section
-      css={{
+      css={mq({
         width: "100%",
-        background: "linear-gradient(180deg, #0A0A0A 0%, #181818 100%);",
         display: "grid",
-        gridTemplateColumns: "75%",
+        gridTemplateColumns: "80%",
         justifyContent: "center",
-      }}
+        padding: "96px 0px",
+      })}
     >
       <div css={{ width: "100%", zIndex: 1, height: "100%" }}>
         <GapVertical times={24} />
-        <div
+        <h3
           css={{
-            position: "relative",
+            fontFamily: HEADING_FAMILY,
+            margin: 0,
+            fontSize: "40px",
+            color: "#000",
+            fontWeight: 800,
           }}
         >
-          <h3 css={{ margin: 0, fontSize: FONT_175, color: "#5A88FF" }}>
-            What I Do
-          </h3>
-          <div
-            css={{
-              position: "absolute",
-              left: "-28px",
-              width: "18px",
-              height: "4px",
-              background: "#5A88FF",
-              top: "50%",
-              borderRadius: "8px",
-            }}
-          />
-        </div>
-        <GapVertical times={4} />
-        <h1 css={mq({ fontSize: [FONT_300, FONT_300, FONT_400], margin: 0 })}>
-          I aspire to create world-class,
-          <br />
-          customer centric user experiences.
-        </h1>
-        <GapVertical times={4} />
+          What I Do
+        </h3>
+        <GapVertical times={3} />
         <p
           css={mq({
-            fontWeight: 300,
-            fontSize: [FONT_150, FONT_150, FONT_175],
+            fontSize: ["16px", "18px", "20px"],
             margin: 0,
+            color: "#000",
+            fontFamily: PARAGRAPH_FAMILY,
+            fontWeight: 400,
           })}
         >
-          Since Jan 2020, I have worked on a variety of problems with a
-          customer-centric mindset,
-          <br />
-          forming strong foundations in these key areas:
+          My core abilities as an engineer.
         </p>
-        <GapVertical times={9} />
+
+        <GapVertical times={15} />
         <div
           css={mq({
-            display: "grid",
-            width: "100%",
-            gridTemplateColumns: [
-              "repeat(auto-fill)",
-              "repeat(auto-fill, 30%)",
-              "repeat(auto-fill, 30%)",
-            ],
-            gridGap: ["2%", "5%", "5%"],
+            display: "flex",
+            flexDirection: ["column", "row", "row"],
+            flexWrap: "wrap",
+            gap: ["48px", "48px", "64px"],
+            width: ["100%", "115%", "115%"],
+            marginLeft: ["0%", "-7.5%", "-7.5%"],
+            justifyContent: ["unset", "unset", "center"],
+            alignItems: ["center", "unset", "unset"],
           })}
         >
-          {CoreServices.map((service) => (
+          {CoreServices.map((service, index) => (
             <div
-              css={{
-                background:
-                  "linear-gradient(180deg, #242424 0%, #1D1D1D 100%);",
-                borderRadius: "24px",
-                width: "100%",
+              css={mq({
+                width: ["100%", "340px", "436px"],
                 height: "480px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-              }}
+                boxShadow:
+                  "0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 16px rgba(0, 0, 0, 0.1)",
+                borderRadius: "8px",
+                borderBottom: `4px solid ${colors[index]}`,
+              })}
               key={service.title}
             >
               <div
@@ -107,15 +97,28 @@ export const WhatIDo = () => {
                   src={service.image}
                   loading="lazy"
                 />
-                <GapVertical times={9} />
-                <h4 css={{ fontSize: FONT_200, margin: 0 }}>{service.title}</h4>
+                <GapVertical times={10} />
+                <h4
+                  css={{
+                    fontSize: "24px",
+                    margin: 0,
+                    color: "#000",
+                    fontFamily: PARAGRAPH_FAMILY,
+                    fontWeight: 600,
+                  }}
+                >
+                  {service.title}
+                </h4>
                 <GapVertical times={4} />
                 <p
                   css={{
                     margin: 0,
-                    fontWeight: 300,
-                    lineHeight: "200%",
+                    fontWeight: 400,
+                    lineHeight: "175%",
                     textAlign: "center",
+                    color: "#000",
+                    fontFamily: PARAGRAPH_FAMILY,
+                    width: "80%",
                   }}
                 >
                   {service.desc}
@@ -124,7 +127,6 @@ export const WhatIDo = () => {
             </div>
           ))}
         </div>
-        <GapVertical times={9} />
       </div>
     </section>
   );

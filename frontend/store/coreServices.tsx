@@ -18,6 +18,6 @@ export const CoreServices: CoreService[] = [
   {
     title: "DevOps",
     image: "/devops.png",
-    desc: "Throughout my career thus far, I have gained proficiency in build pipelines, as well as automation and maintenance as a whole.",
+    desc: "Throughout my career thus far, I have gained proficiency in build pipelines, frontend testing, automation and maintenance as a whole.",
   },
 ];

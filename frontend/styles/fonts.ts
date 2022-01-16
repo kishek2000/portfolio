@@ -10,4 +10,5 @@ export const FONT_450 = "48px";
 export const FONT_500 = "64px";
 export const FONT_600 = "72px";
 
-export const HEADING_FAMILY = "Noto Sans JP";
+export const HEADING_FAMILY = "Sen";
+export const PARAGRAPH_FAMILY = "Rubik";

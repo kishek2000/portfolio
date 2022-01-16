@@ -6,6 +6,7 @@ import { Projects } from "../sections/Projects";
 import { TechnicalSkills } from "../sections/TechnicalSkills";
 import { SiteHeader } from "../sections/SiteHeader";
 import { WhatIDo } from "../sections/WhatIDo";
+import { Career } from "../sections/Career";
 
 const Home = () => {
   return (
@@ -21,9 +22,12 @@ const Home = () => {
     >
       <SiteHeader />
       <WhatIDo />
-      <CareerTimeline />
+      <Career />
       <Projects />
+      {/* 
+      <CareerTimeline />
       <TechnicalSkills />
+    */}
       <Contact />
     </main>
   );

@@ -2,7 +2,7 @@
 import { FC } from "react";
 import { GapHorizontal } from "../components/GapHorizontal";
 import { GapVertical } from "../components/GapVertical";
-import { FONT_100 } from "../styles/fonts";
+import { FONT_100, PARAGRAPH_FAMILY } from "../styles/fonts";
 import { mq } from "../styles/mq";
 import { SkillsModel } from "../store/placesInfo";
 
@@ -18,19 +18,22 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
         flexDirection: "column",
         justifyContent: "center",
         width: "100%",
+        fontFamily: PARAGRAPH_FAMILY,
       }}
     >
       <p
         css={mq({
-          fontSize: [FONT_100, "14px", "16px"],
+          fontSize: [FONT_100, "12px", "14px"],
           margin: 0,
-          fontWeight: 300,
+          fontWeight: 500,
           textTransform: "uppercase",
+          color: "#666",
+          letterSpacing: "0.5px",
         })}
       >
         {skills.title}
       </p>
-      <GapVertical times={3} />
+      <GapVertical times={2} />
       <div
         css={{
           display: "flex",
@@ -52,8 +55,8 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
           >
             <img
               css={mq({
-                width: ["24px", "26px", "30px"],
-                height: ["24px", "26px", "30px"],
+                width: ["24px", "24px", "24px"],
+                height: ["24px", "24px", "24px"],
                 objectFit: "contain",
               })}
               loading="lazy"
@@ -62,9 +65,11 @@ export const PlaceSkills: FC<PlaceSkillsProps> = ({ skills }) => {
             <GapHorizontal times={2} />
             <p
               css={mq({
-                fontSize: [FONT_100, "14px", "16px"],
+                fontSize: ["14px", "14px", "16px"],
                 margin: 0,
                 fontWeight: 300,
+                color: "#000",
+                fontFamily: PARAGRAPH_FAMILY,
               })}
             >
               {tech.title}

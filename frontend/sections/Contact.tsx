@@ -1,5 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
+import { SocialIcon } from "react-social-icons";
 import { GapVertical } from "../components/GapVertical";
 import {
   FONT_150,
@@ -7,6 +8,8 @@ import {
   FONT_250,
   FONT_300,
   FONT_400,
+  HEADING_FAMILY,
+  PARAGRAPH_FAMILY,
 } from "../styles/fonts";
 import { mq } from "../styles/mq";
 
@@ -16,8 +19,7 @@ export const Contact = () => {
       css={{
         width: "100%",
         height: "30vh",
-        background: "#0A0A0A",
-        color: "white",
+        color: "black",
         paddingBottom: "72px",
       }}
     >
@@ -35,6 +37,7 @@ export const Contact = () => {
             margin: 0,
             textAlign: "center",
             fontSize: [FONT_250, FONT_250, FONT_400],
+            fontFamily: HEADING_FAMILY,
           })}
         >
           Interested in working together?
@@ -47,11 +50,56 @@ export const Contact = () => {
             margin: 0,
             textAlign: "center",
             width: "95%",
+            fontFamily: PARAGRAPH_FAMILY,
+            color: "#333",
           })}
         >
-          Contact me anytime at kishek12@gmail.com and I'll get back to you as
-          soon as I can!
+          Contact me anytime at{" "}
+          <span
+            css={{
+              textDecoration: "none",
+              color: "#333",
+              fontWeight: 500,
+            }}
+          >
+            kishek12@gmail.com
+          </span>{" "}
+          and I'll get back to you as soon as I can!
         </p>
+        <GapVertical times={12} />
+        <div
+          css={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            gap: "16px",
+          }}
+        >
+          <SocialIcon
+            css={mq({
+              ":hover": {
+                transform: ["scale(1)", "scale(1.05)", "scale(1.05)"],
+              },
+            })}
+            url="https://www.github.com/kishek2000/"
+          />
+          <SocialIcon
+            css={mq({
+              ":hover": {
+                transform: ["scale(1)", "scale(1.05)", "scale(1.05)"],
+              },
+            })}
+            url="https://www.linkedin.com/in/adi-kishore/"
+          />
+          <SocialIcon
+            css={mq({
+              ":hover": {
+                transform: ["scale(1)", "scale(1.05)", "scale(1.05)"],
+              },
+            })}
+            url="https://soundcloud.com/adi-kishore/"
+          />
+        </div>
       </div>
     </section>
   );

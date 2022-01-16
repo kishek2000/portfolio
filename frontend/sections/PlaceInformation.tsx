@@ -7,6 +7,7 @@ import {
   FONT_175,
   FONT_200,
   FONT_250,
+  PARAGRAPH_FAMILY,
 } from "../styles/fonts";
 import { mq } from "../styles/mq";
 import { placesInfo } from "../store/placesInfo";
@@ -15,62 +16,89 @@ import { GapHorizontal } from "../components/GapHorizontal";
 
 interface PlaceInformationProps {
   place: string;
+  isIndustry?: boolean;
 }
 
-export const PlaceInformation: FC<PlaceInformationProps> = ({ place }) => {
+const industry = "#0235ec";
+const volunteering = "#ea9802";
+
+export const PlaceInformation: FC<PlaceInformationProps> = ({
+  place,
+  isIndustry,
+}) => {
   const information = placesInfo.filter((placeInfo) => {
     return placeInfo.place === place;
   });
   if (information.length > 0) {
+    const isVolunteering = information[0].role.includes("Volunteer");
     return (
       <div
-        css={{
+        css={mq({
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           textAlign: "left",
-          width: "87.5%",
-        }}
+          width: [
+            "calc(100% - 104px)",
+            "calc(740px - 104px)",
+            "calc(826px - 104px)",
+          ],
+          height: ["calc(100% - 176px)", "", "calc(530px - 176px)"],
+          background: "white",
+          boxShadow:
+            "0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 16px rgba(0, 0, 0, 0.1)",
+          borderBottom: `4px solid ${isVolunteering ? volunteering : industry}`,
+          borderRadius: "8px",
+          padding: ["88px 52px", "64px 52px", "88px 52px"],
+          fontFamily: PARAGRAPH_FAMILY,
+          transition: "0.4s",
+        })}
       >
-        <GapVertical times={10} />
-        <div
+        <span
           css={mq({
-            position: "absolute",
-            top: ["12px", "24px", "36px"],
-            right: ["12px", "24px", "36px"],
-            fontWeight: 400,
-            fontSize: [FONT_100, FONT_150, FONT_200],
-            color: "rgba(120,120,120)",
+            color: "#777",
+            fontWeight: 500,
+            fontSize: ["16px", "18px", "20px"],
           })}
         >
-          {information[0].timePeriod}
-        </div>
-        <p
+          {information[0].place}
+        </span>
+        <GapVertical times={5} />
+        <h1
           css={mq({
-            fontSize: [FONT_175, FONT_200, FONT_250],
+            color: "#000",
+            fontSize: ["24px", "28px", "36px"],
+            fontWeight: 700,
             margin: 0,
-            fontWeight: 600,
           })}
         >
           {information[0].role}
-        </p>
-        <GapVertical times={6} />
+        </h1>
+        <GapVertical times={2} />
+        <span css={{ color: "#333", fontWeight: 400 }}>
+          {information[0].timePeriod}
+        </span>
+        <GapVertical times={5} />
         <p
           css={mq({
-            fontSize: [FONT_150, "18px", FONT_175],
             margin: 0,
-            fontWeight: 300,
+            fontWeight: 400,
             lineHeight: "150%",
+            color: "#000",
+            fontFamily: PARAGRAPH_FAMILY,
+            fontSize: ["14px", "14px", "16px"],
           })}
         >
           {information[0].desc}
         </p>
-        <GapVertical times={9} />
+        <GapVertical times={8} />
         <p
           css={mq({
-            fontSize: [FONT_150, "18px", FONT_200],
+            fontSize: ["14px", "14px", "16px"],
             margin: 0,
-            fontWeight: 600,
+            fontWeight: 700,
+            color: "#333",
+            fontFamily: PARAGRAPH_FAMILY,
           })}
         >
           Skills and Technologies
@@ -82,21 +110,12 @@ export const PlaceInformation: FC<PlaceInformationProps> = ({ place }) => {
             width: "100%",
             alignItems: "flex-start",
             flexDirection: ["column", "row", "row"],
-            justifyContent: "space-between",
+            gap: "16px",
           })}
         >
-          <PlaceSkills skills={information[0].skills[0]} />
-          {information[0].skills.length > 1 && (
-            <Fragment>
-              <div
-                css={mq({
-                  marginRight: ["0px", "16px", "24px"],
-                  marginBottom: ["24px", "0px", "0px"],
-                })}
-              />
-              <PlaceSkills skills={information[0].skills[1]} />
-            </Fragment>
-          )}
+          {information[0].skills.map((skill, index) => (
+            <PlaceSkills key={index} skills={skill} />
+          ))}
         </div>
       </div>
     );
