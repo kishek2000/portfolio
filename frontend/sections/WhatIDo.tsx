@@ -60,9 +60,9 @@ export const WhatIDo = () => {
             flexDirection: ["column", "row", "row"],
             flexWrap: "wrap",
             gap: ["48px", "48px", "64px"],
-            width: ["100%", "115%", "115%"],
-            marginLeft: ["0%", "-7.5%", "-7.5%"],
-            justifyContent: ["unset", "unset", "center"],
+            width: ["100%", "100%", "100%"],
+            marginLeft: ["0%", "0%", "0%"],
+            justifyContent: ["unset", "unset", "unset"],
             alignItems: ["center", "unset", "unset"],
           })}
         >
