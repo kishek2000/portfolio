@@ -62,7 +62,7 @@ export const WhatIDo = () => {
             gap: ["48px", "48px", "64px"],
             width: ["100%", "100%", "100%"],
             marginLeft: ["0%", "0%", "0%"],
-            justifyContent: ["unset", "unset", "unset"],
+            justifyContent: ["center", "center", "center"],
             alignItems: ["center", "unset", "unset"],
           })}
         >

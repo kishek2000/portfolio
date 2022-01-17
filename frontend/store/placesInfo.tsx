@@ -192,7 +192,7 @@ export const placesInfo: PlaceModel[] = [
     place: "Evergrowing",
     timePeriod: "Jan 2017 - Present",
     role: "Volunteer, Media Production, UI Designer",
-    desc: "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Collaborating on development of meditation mobile app coming soon.",
+    desc: "Media Production and Design focus toward a platform that seeks to provide a place where anyone can become inspired to recognise, understand, discuss and act on global issues. Collaborating on development of meditation mobile app coming soon. Developed a drafted brand guideline after extensive domain research of self-improvement and meditation apps as well as customer needs.",
     skills: [
       {
         title: "Mobile App Development",
