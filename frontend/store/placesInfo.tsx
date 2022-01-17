@@ -9,10 +9,56 @@ export const places = [
 
 export const placesInfo: PlaceModel[] = [
   {
+    place: "Sadafal Education",
+    timePeriod: "Apr 2020 - Present",
+    role: "Full Stack Developer, UI Designer",
+    desc: "Range of work including full redesign and implementation of our global website, to collaborating on the development of a global education platform tailored to anyone who wants to master their passion. Currently leading the implementation and testing of our design system for the education platform, and leading the design and and development of an e-commerce website for the selling of clothes made by our students.",
+    skills: [
+      {
+        title: "Web Design and Development",
+        technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
+          {
+            title: "React",
+            icon: "react.png",
+          },
+          {
+            title: "Typescript",
+            icon: "typescript.png",
+          },
+          {
+            title: "Apollo GraphQL",
+            icon: "apollo-graphql.png",
+          },
+          {
+            title: "CosmosDB",
+            icon: "cosmosdb.svg",
+          },
+          {
+            title: "Remix",
+            icon: "remixrun.svg",
+          },
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          {
+            title: "Cloudflare Workers, Cloudflare Pages",
+            icon: "cloudflare.jpeg",
+          },
+        ],
+      },
+    ],
+  },
+  {
     place: "Optus",
     timePeriod: "Feb 2021 - Aug 2021",
-    role: "Digital Networks Automation Intern",
-    desc: "Full Stack Developer working on the creation and optimisation of automation tools increasing efficiency for networking experts in Optus. Learning technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
+    role: "Full Stack Developer Intern",
+    desc: "As a Full Stack Developer and Digital Networks Automation Intern, worked on the introduction of a DevOps way of working, with the creation and optimisation of automation tools that ease the work of experts in the wider Network team. Learned technical and telecommunication concepts from Senior to Principal Network Engineers and Technical Specialists.",
     skills: [
       {
         title: "Web Development",
@@ -32,14 +78,6 @@ export const placesInfo: PlaceModel[] = [
           {
             title: "MongoDB",
             icon: "mongodb.png",
-          },
-          {
-            title: "Hive",
-            icon: "hive.png",
-          },
-          {
-            title: "Impala",
-            icon: "impala.png",
           },
         ],
       },
@@ -74,11 +112,15 @@ export const placesInfo: PlaceModel[] = [
     place: "Accenture & Autism Awareness",
     timePeriod: "Jan 2021 - Present",
     role: "Full Stack Developer",
-    desc: "Passion project sponsored by Accenture. Full Stack Developer working in a team on an intelligent education platform for children who have ASD. Focused on providing dynamically tailored content with detailed analysis and guidance for parents. In collaboration with Autism Awareness.",
+    desc: "Passion project sponsored by Accenture. Full Stack Developer working in a team on an intelligent education platform for children with ASD. Focused on providing tailored content with detailed analysis and guidance for parents, in collaboration with Autism Awareness. We have completed two phases of work to create an MVP for funding, and are moving into Recommendation AI next.",
     skills: [
       {
-        title: "Web Development",
+        title: "Web Design and Development",
         technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
           {
             title: "React",
             icon: "react.png",
@@ -98,15 +140,6 @@ export const placesInfo: PlaceModel[] = [
         ],
       },
       {
-        title: "Design",
-        technologies: [
-          {
-            title: "Figma",
-            icon: "figma.png",
-          },
-        ],
-      },
-      {
         title: "DevOps",
         technologies: [
           {
@@ -121,56 +154,7 @@ export const placesInfo: PlaceModel[] = [
       },
     ],
   },
-  {
-    place: "Sadafal Education",
-    timePeriod: "Apr 2020 - Present",
-    role: "Full Stack Developer, UI Designer",
-    desc: "Range of work from maintaining global website with redesign and development currently in progress, to collaborating on the development of a global education platform tailored to anyone who wants to master their passion.",
-    skills: [
-      {
-        title: "Web Design and Development",
-        technologies: [
-          {
-            title: "Figma",
-            icon: "figma.png",
-          },
-          {
-            title: "React",
-            icon: "react.png",
-          },
-          {
-            title: "Typescript",
-            icon: "typescript.png",
-          },
-          {
-            title: "Apollo GraphQL",
-            icon: "apollo-graphql.png",
-          },
-          {
-            title: "DynamoDB",
-            icon: "dynamodb.png",
-          },
-        ],
-      },
-      {
-        title: "DevOps",
-        technologies: [
-          {
-            title: "Docker",
-            icon: "docker.png",
-          },
-          {
-            title: "EC2",
-            icon: "ec2.png",
-          },
-          {
-            title: "ECS",
-            icon: "ecs.png",
-          },
-        ],
-      },
-    ],
-  },
+
   {
     place: "Vihangam Yoga",
     timePeriod: "Feb 2018 - Present",

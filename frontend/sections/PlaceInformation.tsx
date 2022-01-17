@@ -43,7 +43,11 @@ export const PlaceInformation: FC<PlaceInformationProps> = ({
             "calc(740px - 104px)",
             "calc(826px - 104px)",
           ],
-          height: ["calc(100% - 176px)", "", "calc(530px - 176px)"],
+          height: [
+            "calc(100% - 176px)",
+            "calc(572px - 176px)",
+            "calc(530px - 176px)",
+          ],
           background: "white",
           boxShadow:
             "0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 16px rgba(0, 0, 0, 0.1)",

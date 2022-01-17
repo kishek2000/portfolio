@@ -149,8 +149,8 @@ export const projects: ProjectModel[] = [
             icon: "mongodb.png",
           },
           {
-            title: "EC2, ECR, ECS",
-            icon: "/aws.png",
+            title: "ECR, ECS",
+            icon: "/ecs.png",
           },
           {
             title: "Github",
@@ -262,7 +262,7 @@ export const projects: ProjectModel[] = [
         link: "https://www.virsrinivas.com/",
       },
     ],
-    startDate: new Date("23/10/2021"),
+    startDate: new Date("10/23/2021"),
   },
   {
     thumbnail: "/thumbnails/discovery.png",
@@ -350,7 +350,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/kp.png",
     title: "knowledge.path",
     subtitle: "Anyone can learn.",
-    desc: "knowledge.path is an education platform releasing mid-late 2021. With their own path, anyone can be employed in their passion. Powered by Sadafal Education.",
+    desc: "knowledge.path is an education platform releasing in early 2022. With their own path, anyone can be employed in their passion. Powered by Sadafal Education.",
     roles: ["Full Stack Developer, Designer"],
     timePeriod: "Jul 2020 - Now",
     type: "industry",

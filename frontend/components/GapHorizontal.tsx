@@ -6,5 +6,5 @@ export interface GapProps {
 }
 
 export const GapHorizontal: FC<GapProps> = ({ times }) => {
-  return <div css={{ marginRight: `${4 * times}px` }} />;
+  return <div css={{ minWidth: `${4 * times}px` }} />;
 };

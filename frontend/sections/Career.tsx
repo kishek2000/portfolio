@@ -7,9 +7,9 @@ import { mq } from "../styles/mq";
 import { PlaceInformation } from "./PlaceInformation";
 
 const places = [
+  "Sadafal Education",
   "Optus",
   "Accenture & Autism Awareness",
-  "Sadafal Education",
   "Vihangam Yoga",
   "Evergrowing",
   "Kumbh Sukrit",
@@ -68,7 +68,7 @@ export const Career = () => {
           css={mq({
             display: "flex",
             flexDirection: ["column-reverse", "column", "column"],
-            gap: ["24px", "48px", "48px"],
+            gap: ["48px", "48px", "48px"],
             position: "relative",
           })}
         >
@@ -124,13 +124,12 @@ export const Career = () => {
             css={mq({
               display: ["flex", "none", "none"],
               alignSelf: "center",
-              paddingBottom: "20px",
+              marginBottom: "20px",
             })}
           >
             {Stepper(active, setActive)}
           </div>
           {CareerCardsControls(setActive, active)}
-
           <div
             css={mq({
               display: ["flex", "none", "none"],
@@ -211,7 +210,7 @@ function Legend() {
 function CareerCardsControls(setActive, active: number) {
   return (
     <div
-      css={{
+      css={mq({
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
@@ -219,7 +218,8 @@ function CareerCardsControls(setActive, active: number) {
         justifyContent: "space-between",
         alignSelf: "center",
         position: "relative",
-      }}
+        marginTop: ["-36px", "0px", "0px"],
+      })}
     >
       <span
         css={{
@@ -228,6 +228,11 @@ function CareerCardsControls(setActive, active: number) {
           textAlign: "left",
           fontWeight: 600,
           fontFamily: PARAGRAPH_FAMILY,
+          maxWidth: "180px",
+          height: "40px",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
         }}
         onClick={() => setActive(Math.max(active - 1, 0))}
       >
@@ -255,6 +260,11 @@ function CareerCardsControls(setActive, active: number) {
           textAlign: "right",
           fontWeight: 600,
           fontFamily: PARAGRAPH_FAMILY,
+          maxWidth: "180px",
+          height: "40px",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
         }}
         onClick={() => setActive(Math.min(active + 1, places.length - 1))}
       >

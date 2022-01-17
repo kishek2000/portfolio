@@ -3,5 +3,5 @@ import { FC } from "react";
 import { GapProps } from "./GapHorizontal";
 
 export const GapVertical: FC<GapProps> = ({ times }) => {
-  return <div css={{ marginBottom: `${4 * times}px` }} />;
+  return <div css={{ minHeight: `${4 * times}px` }} />;
 };
