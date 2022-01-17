@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import { Fragment } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { GapHorizontal } from "../components/GapHorizontal";
 import { GapVertical } from "../components/GapVertical";
 import { ProjectModel, projects } from "../store/projectInfo";
@@ -18,6 +18,18 @@ import { PlaceSkills } from "./PlaceSkills";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 export const Projects = () => {
+  const [sortedProjects, setSortedProjects] = useState<ProjectModel[] | null>(
+    null
+  );
+
+  useEffect(() => {
+    setSortedProjects(
+      projects.sort((a, b) =>
+        a.startDate.getTime() < b.startDate.getTime() ? 1 : -1
+      )
+    );
+  }, []);
+
   return (
     <section
       css={{
@@ -171,11 +183,11 @@ export const Projects = () => {
               flexWrap: "wrap",
             })}
           >
-            {projects
-              .sort((a, b) =>
-                a.startDate.getTime() < b.startDate.getTime() ? 1 : -1
-              )
-              .map((project, index) => ProjectCard(index, project))}
+            {sortedProjects
+              ? sortedProjects.map((project, index) =>
+                  ProjectCard(index, project)
+                )
+              : null}
           </div>
         </div>
       </div>

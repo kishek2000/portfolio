@@ -18,7 +18,7 @@ const places = [
 const volunteering = ["Vihangam Yoga", "Evergrowing", "Kumbh Sukrit"];
 
 export const Career = () => {
-  const [active, setActive] = useState(2);
+  const [active, setActive] = useState(0);
   return (
     <section
       css={mq({
