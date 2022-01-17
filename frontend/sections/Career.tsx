@@ -68,7 +68,7 @@ export const Career = () => {
           css={mq({
             display: "flex",
             flexDirection: ["column-reverse", "column", "column"],
-            gap: ["48px", "48px", "48px"],
+            gap: ["0px", "48px", "48px"],
             position: "relative",
           })}
         >
@@ -120,23 +120,35 @@ export const Career = () => {
               </div>
             ) : null}
           </div>
+          {
+            <div css={mq({ display: ["flex", "none", "none"] })}>
+              <GapVertical times={10} />{" "}
+            </div>
+          }
           <div
             css={mq({
               display: ["flex", "none", "none"],
               alignSelf: "center",
-              marginBottom: "20px",
             })}
           >
             {Stepper(active, setActive)}
           </div>
+          {
+            <div css={mq({ display: ["flex", "none", "none"] })}>
+              <GapVertical times={4} />
+            </div>
+          }
           {CareerCardsControls(setActive, active)}
+          {
+            <div css={mq({ display: ["flex", "none", "none"] })}>
+              <GapVertical times={8} />
+            </div>
+          }
           <div
             css={mq({
               display: ["flex", "none", "none"],
               position: "relative",
               alignSelf: "center",
-              paddingBottom: "24px",
-              marginTop: "-12px",
             })}
           >
             {Legend()}
@@ -218,7 +230,6 @@ function CareerCardsControls(setActive, active: number) {
         justifyContent: "space-between",
         alignSelf: "center",
         position: "relative",
-        marginTop: ["-36px", "0px", "0px"],
       })}
     >
       <span
