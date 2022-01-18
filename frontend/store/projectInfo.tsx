@@ -50,12 +50,12 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "repository",
+        title: "Repository",
         icon: "github.png",
         link: "https://github.com/kishek2000/Team-100",
       },
       {
-        title: "video demo",
+        title: "Video Demo",
         icon: "repository.png",
         link: "https://www.youtube.com/watch?v=znZc0CzMUmQ",
       },
@@ -103,12 +103,12 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       // {
-      //   title: "repository",
+      //   title: "Repository",
       //   icon: "github.png",
       //   link: "https://github.com/kishek2000/accentureHackathon",
       // },
       // {
-      //   title: "live demo",
+      //   title: "Live Demo",
       //   icon: "repository.png",
       //   link: "https://galactic-ed.xyz/",
       // },
@@ -161,14 +161,9 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "repository",
+        title: "Repository",
         icon: "github.png",
         link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
-      },
-      {
-        title: "live demo",
-        icon: "repository.png",
-        link: "https://concentrum-m6umdhxmd-seng3011sourdough.vercel.app/",
       },
     ],
     startDate: new Date("01/02/2021"),
@@ -207,12 +202,12 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "repository",
+        title: "Repository",
         icon: "github.png",
         link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
       },
       {
-        title: "video demo",
+        title: "Video Demo",
         icon: "repository.png",
         link: "https://youtu.be/FvWCukOS9bE",
       },
@@ -257,7 +252,7 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "live website",
+        title: "Live Website",
         icon: "repository.png",
         link: "https://www.virsrinivas.com/",
       },
@@ -294,7 +289,7 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "live demo",
+        title: "Live Demo",
         icon: "repository.png",
         link: "https://kishek2000.github.io/discovery/",
       },
@@ -339,7 +334,7 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "global website",
+        title: "Global Website",
         icon: "repository.png",
         link: "https://sadafal-education.com",
       },
@@ -383,7 +378,7 @@ export const projects: ProjectModel[] = [
     ],
     links: [
       {
-        title: "coming soon...",
+        title: "Coming Soon...",
         icon: "repository.png",
         link: "/",
         disable: true,

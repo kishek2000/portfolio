@@ -92,9 +92,9 @@ export const Career = () => {
               <div
                 css={mq({
                   position: "absolute",
-                  opacity: 0.6,
+                  opacity: 0.5,
                   right: "55%",
-                  transform: "scale(0.65)",
+                  transform: "scale(0.55)",
                   zIndex: -1,
                   transition: "0.4s",
                   display: ["none", "flex", "flex"],
@@ -108,9 +108,9 @@ export const Career = () => {
               <div
                 css={mq({
                   position: "absolute",
-                  opacity: 0.6,
+                  opacity: 0.5,
                   left: "55%",
-                  transform: "scale(0.65)",
+                  transform: "scale(0.55)",
                   zIndex: -1,
                   transition: "0.4s",
                   display: ["none", "flex", "flex"],
