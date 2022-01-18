@@ -355,19 +355,27 @@ function ProjectCard(index: number, project: ProjectModel) {
                 flexDirection: "row",
                 alignItems: "center",
                 padding: ["4.5px 7px", "6px 9px", "8px 12px"],
-                background: !link.title.includes("demo") ? "white" : "#5A88FF",
-                color: !link.title.includes("demo") ? "black" : "white",
+                background: !link.title.toLowerCase().includes("demo")
+                  ? "white"
+                  : "#5A88FF",
+                color: !link.title.toLowerCase().includes("demo")
+                  ? "black"
+                  : "white",
                 borderRadius: "8px",
                 transition: "0.4s",
                 ":hover": {
-                  background: !link.title.includes("demo")
+                  background: !link.title.toLowerCase().includes("demo")
                     ? [
-                        !link.title.includes("demo") ? "white" : "#5A88FF",
+                        !link.title.toLowerCase().includes("demo")
+                          ? "white"
+                          : "#5A88FF",
                         "rgba(210, 210, 210)",
                         "rgba(210, 210, 210)",
                       ]
                     : [
-                        !link.title.includes("demo") ? "white" : "#5A88FF",
+                        !link.title.toLowerCase().includes("demo")
+                          ? "white"
+                          : "#5A88FF",
                         "rgba(41, 101, 255)",
                         "rgba(41, 101, 255)",
                       ],
@@ -382,7 +390,9 @@ function ProjectCard(index: number, project: ProjectModel) {
                 css={{
                   width: "14px",
                   height: "14px",
-                  filter: link.title.includes("demo") ? "invert(1)" : "",
+                  filter: link.title.toLowerCase().includes("demo")
+                    ? "invert(1)"
+                    : "",
                 }}
               />
               <GapHorizontal times={2} />
