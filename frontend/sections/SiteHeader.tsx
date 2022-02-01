@@ -73,7 +73,7 @@ export const SiteHeader = () => {
             <h1
               css={mq({
                 margin: 0,
-                fontSize: ["36px", '52px', FONT_600],
+                fontSize: ["36px", '48px', FONT_600],
                 fontFamily: HEADING_FAMILY,
                 color: "#000",
                 fontWeight: 800,
@@ -85,7 +85,7 @@ export const SiteHeader = () => {
             <p
               css={mq({
                 margin: 0,
-                fontSize: ["14px", "16px", "20px"],
+                fontSize: ["14px", "14px", "20px"],
                 fontWeight: 300,
                 color: "#222",
                 fontFamily: PARAGRAPH_FAMILY,
