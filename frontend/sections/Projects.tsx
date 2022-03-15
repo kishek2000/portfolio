@@ -348,71 +348,73 @@ function ProjectCard(index: number, project: ProjectModel) {
             gap: "12px",
           })}
         >
-          {project.links.map((link, index) => (
-            <div
-              css={mq({
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                padding: ["4.5px 7px", "6px 9px", "8px 12px"],
-                background: !link.title.toLowerCase().includes("demo")
-                  ? "white"
-                  : "#5A88FF",
-                color: !link.title.toLowerCase().includes("demo")
-                  ? "black"
-                  : "white",
-                borderRadius: "8px",
-                transition: "0.4s",
-                ":hover": {
-                  background: !link.title.toLowerCase().includes("demo")
-                    ? [
-                        !link.title.toLowerCase().includes("demo")
-                          ? "white"
-                          : "#5A88FF",
-                        "rgba(210, 210, 210)",
-                        "rgba(210, 210, 210)",
-                      ]
-                    : [
-                        !link.title.toLowerCase().includes("demo")
-                          ? "white"
-                          : "#5A88FF",
-                        "rgba(41, 101, 255)",
-                        "rgba(41, 101, 255)",
-                      ],
-                },
-                boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-              })}
-              key={index}
-            >
-              <img
-                src={link.icon}
-                loading="lazy"
-                css={{
-                  width: "14px",
-                  height: "14px",
-                  filter: link.title.toLowerCase().includes("demo")
-                    ? "invert(1)"
-                    : "",
-                }}
-              />
-              <GapHorizontal times={2} />
-              <a
-                css={mq({
-                  fontSize: ["10px", FONT_100, FONT_100],
-                  fontWeight: 600,
-                  // textTransform: "uppercase",
-                  textDecoration: "none",
-                  color: "inherit",
-                })}
-                href={link?.disable ? null : link.link}
-                target={"_blank"}
-              >
-                {link.title}
-              </a>
-            </div>
-          ))}
+          {project.links
+            ? project.links.map((link, index) => (
+                <div
+                  css={mq({
+                    display: "flex",
+                    flexDirection: "row",
+                    alignItems: "center",
+                    padding: ["4.5px 7px", "6px 9px", "8px 12px"],
+                    background: !link.title.toLowerCase().includes("demo")
+                      ? "white"
+                      : "#5A88FF",
+                    color: !link.title.toLowerCase().includes("demo")
+                      ? "black"
+                      : "white",
+                    borderRadius: "8px",
+                    transition: "0.4s",
+                    ":hover": {
+                      background: !link.title.toLowerCase().includes("demo")
+                        ? [
+                            !link.title.toLowerCase().includes("demo")
+                              ? "white"
+                              : "#5A88FF",
+                            "rgba(210, 210, 210)",
+                            "rgba(210, 210, 210)",
+                          ]
+                        : [
+                            !link.title.toLowerCase().includes("demo")
+                              ? "white"
+                              : "#5A88FF",
+                            "rgba(41, 101, 255)",
+                            "rgba(41, 101, 255)",
+                          ],
+                    },
+                    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
+                  })}
+                  key={index}
+                >
+                  <img
+                    src={link.icon}
+                    loading="lazy"
+                    css={{
+                      width: "14px",
+                      height: "14px",
+                      filter: link.title.toLowerCase().includes("demo")
+                        ? "invert(1)"
+                        : "",
+                    }}
+                  />
+                  <GapHorizontal times={2} />
+                  <a
+                    css={mq({
+                      fontSize: ["10px", FONT_100, FONT_100],
+                      fontWeight: 600,
+                      // textTransform: "uppercase",
+                      textDecoration: "none",
+                      color: "inherit",
+                    })}
+                    href={link?.disable ? null : link.link}
+                    target={"_blank"}
+                  >
+                    {link.title}
+                  </a>
+                </div>
+              ))
+            : null}
         </div>
-        <GapVertical times={10} />
+        {project.links ? <GapVertical times={10} /> : null}
       </div>
     </div>
   );

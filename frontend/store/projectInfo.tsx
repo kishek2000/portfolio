@@ -8,7 +8,7 @@ export interface ProjectModel {
   roles: string[];
   timePeriod: string;
   skills: SkillsModel[];
-  links: ProjectLink[];
+  links?: ProjectLink[];
   startDate: Date;
   type: "industry" | "personal" | "university";
 }
@@ -159,18 +159,18 @@ export const projects: ProjectModel[] = [
         ],
       },
     ],
-    links: [
-      {
-        title: "Repository",
-        icon: "github.png",
-        link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
-      },
-      {
-        title: "Video Demo",
-        icon: "repository.png",
-        link: "https://youtu.be/yHOr7dQGYKk",
-      },
-    ],
+    // links: [
+    //   {
+    //     title: "Repository",
+    //     icon: "github.png",
+    //     link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
+    //   },
+    //   {
+    //     title: "Video Demo",
+    //     icon: "repository.png",
+    //     link: "https://youtu.be/yHOr7dQGYKk",
+    //   },
+    // ],
     startDate: new Date("01/02/2021"),
   },
   {
