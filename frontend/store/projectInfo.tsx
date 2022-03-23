@@ -66,7 +66,7 @@ export const projects: ProjectModel[] = [
     thumbnail: "/thumbnails/galacticed.png",
     title: "GalacticEd",
     subtitle: "Empower your child's learning.",
-    desc: "GalacticEd is an intelligent education platform that tailors content dynamically for children who have ASD.",
+    desc: "GalacticEd is an intelligent education platform that tailors content dynamically for children who have ASD. All Rights to Autism Awareness and Accenture.",
     roles: ["Full Stack Developer", "Designer"],
     timePeriod: "Jan 2021 - Now",
     type: "industry",
