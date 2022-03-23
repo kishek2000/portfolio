@@ -113,9 +113,9 @@ export const projects: ProjectModel[] = [
       //   link: "https://galactic-ed.xyz/",
       // },
       {
-        title: "Hackathon Pitch",
+        title: "Walkthrough Demo",
         icon: "repository.png",
-        link: "https://www.youtube.com/watch?v=uWQ4hUP4L0k",
+        link: "https://youtu.be/YY9z1u1X_fA",
       },
     ],
     startDate: new Date("01/13/2021"),
