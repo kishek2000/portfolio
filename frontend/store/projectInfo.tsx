@@ -347,6 +347,51 @@ export const projects: ProjectModel[] = [
     startDate: new Date("06/01/2020"),
   },
   {
+    thumbnail: "/thumbnails/se.png",
+    title: "Bahudha Foundation",
+    subtitle: "Global peace and harmony.",
+    desc: "With a vision for global peace and harmony, bahudha foundation is an organisation focused on the empowerment of one and all.",
+    roles: ["Frontend Developer, Designer"],
+    timePeriod: "Mar 2022 - Now",
+    type: "industry",
+    skills: [
+      {
+        title: "Web Development",
+        technologies: [
+          {
+            title: "React",
+            icon: "react.png",
+          },
+          {
+            title: "Typescript",
+            icon: "typescript.png",
+          },
+          {
+            title: "Cloudflare Pages",
+            icon: "cloudflare.jpeg",
+          },
+        ],
+      },
+      {
+        title: "Design",
+        technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
+        ],
+      },
+    ],
+    links: [
+      {
+        title: "Global Website",
+        icon: "repository.png",
+        link: "https://bahudha-foundation.org",
+      },
+    ],
+    startDate: new Date("02/03/2022"),
+  },
+  {
     thumbnail: "/thumbnails/kp.png",
     title: "knowledge.path",
     subtitle: "Anyone can learn.",
