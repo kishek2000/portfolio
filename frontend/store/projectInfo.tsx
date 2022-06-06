@@ -347,7 +347,7 @@ export const projects: ProjectModel[] = [
     startDate: new Date("06/01/2020"),
   },
   {
-    thumbnail: "/thumbnails/se.png",
+    thumbnail: "/thumbnails/bahudha.png",
     title: "Bahudha Foundation",
     subtitle: "Global peace and harmony.",
     desc: "With a vision for global peace and harmony, bahudha foundation is an organisation focused on the empowerment of one and all.",
