@@ -73,7 +73,7 @@ export const SiteHeader = () => {
             <h1
               css={mq({
                 margin: 0,
-                fontSize: ["36px", '52px', '64px'],
+                fontSize: ["36px", "52px", "64px"],
                 fontFamily: HEADING_FAMILY,
                 color: "#000",
                 fontWeight: 800,
@@ -117,7 +117,7 @@ export const SiteHeader = () => {
             })}
           >
             <img
-              src="/profile.png"
+              src="/profile.jpg"
               css={mq({
                 width: ["216px", "360px", "476px"],
                 height: ["216px", "360px", "476px"],
