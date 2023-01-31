@@ -22,6 +22,44 @@ interface ProjectLink {
 
 export const projects: ProjectModel[] = [
   {
+    thumbnail: "/thumbnails/dungeonMania.png",
+    title: "Dungeon Mania",
+    subtitle: "Explore dungeons and defeat monsters",
+    desc: "DungeonMania is a 2D game that we've developed where you can explore and defeat monsters! From time travel, to potions, there's many things you can do.",
+    roles: ["Backend Developer"],
+    timePeriod: "Jul - Aug 2022",
+    type: "university",
+    skills: [
+      {
+        title: "Backend",
+        technologies: [
+          {
+            title: "Java",
+            icon: "java.jpeg",
+          },
+        ],
+      },
+      {
+        title: "Collaboration/Documentation",
+        technologies: [
+          {
+            title: "Gitlab Kanban",
+            icon: "gitlab.png",
+          },
+        ],
+      },
+    ],
+    links: [
+      {
+        title: "Video Coming Soon...",
+        icon: "repository.png",
+        link: "/",
+        disable: true,
+      },
+    ],
+    startDate: new Date("03/07/2022"),
+  },
+  {
     thumbnail: "/thumbnails/mylounge.png",
     title: "myLounge",
     subtitle: "Listen. Watch. Relax.",
