@@ -49,11 +49,11 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: [
-      {
-        title: "Repository",
-        icon: "github.png",
-        link: "https://github.com/kishek2000/Team-100",
-      },
+      // {
+      //   title: "Repository",
+      //   icon: "github.png",
+      //   link: "https://github.com/kishek2000/Team-100",
+      // },
       {
         title: "Video Demo",
         icon: "repository.png",
@@ -160,11 +160,11 @@ export const projects: ProjectModel[] = [
       },
     ],
     links: [
-      {
-        title: "Repository",
-        icon: "github.png",
-        link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
-      },
+      // {
+      //   title: "Repository",
+      //   icon: "github.png",
+      //   link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
+      // },
       {
         title: "Video Demo",
         icon: "repository.png",
@@ -209,7 +209,7 @@ export const projects: ProjectModel[] = [
       {
         title: "Repository",
         icon: "github.png",
-        link: "https://github.com/nikhilahuja314/SENG3011_SourDough",
+        link: "https://github.com/kishek2000/transport-me",
       },
       {
         title: "Video Demo",
