@@ -22,6 +22,68 @@ interface ProjectLink {
 
 export const projects: ProjectModel[] = [
   {
+    thumbnail: "/thumbnails/autocar.png",
+    title: "AutoCAR",
+    subtitle:
+      "A web-based real-time collaboration platform for CAR T-Cell therapy research",
+    desc: "AutoCAR is an intelligent web platform that transforms CAR T-Cell therapy research by facilitating real-time collaborative, visual-driven analysis in a shared whiteboard space, accelerating the path from exploratory insights to structured scientific discovery.",
+    roles: ["Project Lead", "Developer", "Research"],
+    timePeriod: "Nov 2022 - Sept 2023",
+    type: "university",
+    skills: [
+      {
+        title: "Web Design & Development",
+        technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
+          {
+            title: "React",
+            icon: "react.png",
+          },
+          {
+            title: "Typescript",
+            icon: "typescript.png",
+          },
+          {
+            title: "CSS",
+            icon: "css.png",
+          },
+          {
+            title: "Liveblocks",
+            icon: "liveblocks.jpeg",
+          },
+          {
+            title: "R",
+            icon: "R.png",
+          },
+        ],
+      },
+      {
+        title: "Devops",
+        technologies: [
+          {
+            icon: "cloudflare.jpeg",
+            title: "Cloudflare Workers",
+          },
+          {
+            icon: "ngrok.png",
+            title: "ngrok",
+          },
+        ],
+      },
+    ],
+    links: [
+      {
+        title: "Video Demo",
+        icon: "repository.png",
+        link: "https://youtu.be/LxSKfENRs3g",
+      },
+    ],
+    startDate: new Date("03/09/2023"),
+  },
+  {
     thumbnail: "/thumbnails/dungeonMania.png",
     title: "Dungeon Mania",
     subtitle: "Explore dungeons and defeat monsters",
@@ -57,7 +119,7 @@ export const projects: ProjectModel[] = [
         disable: true,
       },
     ],
-    startDate: new Date("03/07/2022"),
+    startDate: new Date("03/07/2023"),
   },
   {
     thumbnail: "/thumbnails/mylounge.png",

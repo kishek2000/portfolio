@@ -17,7 +17,6 @@ const Home = () => {
         fontFamily: HEADING_FAMILY,
         display: "flex",
         flexDirection: "column",
-        color: "white",
       }}
     >
       <SiteHeader />

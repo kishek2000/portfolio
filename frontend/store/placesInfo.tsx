@@ -2,12 +2,59 @@ export const places = [
   "Optus",
   "Accenture",
   "Sadafal Education",
+  "Atlassian",
   "Vihangam Yoga",
   "Sukrit Life",
   "Kumbh Sukrit",
 ];
 
 export const placesInfo: PlaceModel[] = [
+  {
+    place: "Atlassian",
+    timePeriod: "Nov 2022 - June 2023",
+    role: "Full Stack Developer Intern",
+    desc: "During my tenure as a Full Stack Developer with a focus on Frontend Development at Atlassian's Measurement Platform team, I enhanced feature flagging and experimentation workflows, advancing developer efficiency. Engaging in the complete software development lifecycle, I spearheaded the ideation and production of diverse features, benefiting from the mentorship of Senior to Principal Engineers in refining my technical and development expertise.    ",
+    skills: [
+      {
+        title: "Web Design and Development",
+        technologies: [
+          {
+            title: "Figma",
+            icon: "figma.png",
+          },
+          {
+            title: "React",
+            icon: "react.png",
+          },
+          {
+            title: "Typescript",
+            icon: "typescript.png",
+          },
+          {
+            title: "Relay GraphQL",
+            icon: "relay-graphql.png",
+          },
+          {
+            title: "PostrgreSQL",
+            icon: "postgresql.png",
+          },
+        ],
+      },
+      {
+        title: "DevOps",
+        technologies: [
+          {
+            title: "Bitbucket Pipelines",
+            icon: "bitbucket.png",
+          },
+          {
+            title: "YAML",
+            icon: "yaml.png",
+          },
+        ],
+      },
+    ],
+  },
   {
     place: "Sadafal Education",
     timePeriod: "Apr 2020 - Present",

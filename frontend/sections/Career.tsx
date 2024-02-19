@@ -7,6 +7,7 @@ import { mq } from "../styles/mq";
 import { PlaceInformation } from "./PlaceInformation";
 
 const places = [
+  "Atlassian",
   "Sadafal Education",
   "Optus",
   "Accenture & Autism Awareness",
