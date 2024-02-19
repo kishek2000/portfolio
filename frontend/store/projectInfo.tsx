@@ -22,10 +22,37 @@ interface ProjectLink {
 
 export const projects: ProjectModel[] = [
   {
+    thumbnail: "/thumbnails/neuronudge.webp",
+    title: "NeuroNudge",
+    subtitle: "An intelligent algorithm that tailors to learning with ASD.",
+    desc: "NeuroNudge is an innovative educational platform we've developed, designed to transform the learning experience for individuals with ASD. With adaptive Q-learning algorithms at its core, it offers personalized learning journeys, allowing users to engage with content at their own pace. From interactive challenges to tailored learning modules, NeuroNudge is redefining what's possible in adaptive education for unique minds.",
+    roles: ["Project Lead", "Developer", "Research"],
+    timePeriod: "Nov - Dec 2023",
+    type: "university",
+    skills: [
+      {
+        title: "Algorithm Development",
+        technologies: [
+          {
+            title: "Rust",
+            icon: "rust.png",
+          },
+        ],
+      },
+    ],
+    links: [
+      {
+        title: "Repository",
+        icon: "repository.png",
+        link: "https://github.com/kishek2000/neuro-nudge/tree/main",
+      },
+    ],
+    startDate: new Date("03/11/2023"),
+  },
+  {
     thumbnail: "/thumbnails/autocar.png",
     title: "AutoCAR",
-    subtitle:
-      "A web-based real-time collaboration platform for CAR T-Cell therapy research",
+    subtitle: "A web-based whiteboard platform for CAR T-Cell research.",
     desc: "AutoCAR is an intelligent web platform that transforms CAR T-Cell therapy research by facilitating real-time collaborative, visual-driven analysis in a shared whiteboard space, accelerating the path from exploratory insights to structured scientific discovery.",
     roles: ["Project Lead", "Developer", "Research"],
     timePeriod: "Nov 2022 - Sept 2023",
