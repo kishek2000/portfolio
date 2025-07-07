@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { Fragment, useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { GapHorizontal } from "../components/GapHorizontal";
 import { GapVertical } from "../components/GapVertical";
 import { ProjectModel, projects } from "../store/projectInfo";
@@ -16,6 +17,9 @@ import {
 import { mq } from "../styles/mq";
 import { PlaceSkills } from "./PlaceSkills";
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { colors, gradients, shadows, glassEffect } from "../styles/theme";
+import { AnimatedSection } from "../components/AnimatedSection";
 
 export const Projects = () => {
   const [sortedProjects, setSortedProjects] = useState<ProjectModel[] | null>(
@@ -32,390 +36,430 @@ export const Projects = () => {
 
   return (
     <section
+      data-section="projects"
       css={{
         width: "100%",
         display: "grid",
         gridTemplateColumns: "80%",
         justifyContent: "center",
         padding: "120px 0px",
+        position: "relative",
       }}
     >
       <div
         css={{ width: "100%", height: "100%", zIndex: 1, position: "relative" }}
       >
-        <h3
-          css={{
-            fontFamily: HEADING_FAMILY,
-            margin: 0,
-            fontSize: "40px",
-            color: "#000",
-            fontWeight: 800,
-          }}
-        >
-          Projects
-        </h3>
-        <GapVertical times={3} />
-        <div
-          css={mq({
-            display: "flex",
-            flexDirection: ["column", "row", "row"],
-            alignItems: ["unset", "center", "center"],
-            justifyContent: "space-between",
-            gap: "36px",
-          })}
-        >
-          <p
-            css={mq({
-              fontSize: ["16px", "18px", "20px"],
+        <AnimatedSection>
+          <motion.h3
+            css={{
+              fontFamily: HEADING_FAMILY,
               margin: 0,
-              color: "#000",
-              fontFamily: PARAGRAPH_FAMILY,
-              fontWeight: 400,
-            })}
+              fontSize: "48px",
+              color: colors.light,
+              fontWeight: 800,
+              textAlign: "center",
+              marginBottom: "16px",
+              background: gradients.primary,
+              backgroundClip: "text",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
           >
-            Industry, Personal and University projects.
-          </p>
+            Featured Projects
+          </motion.h3>
+
+          <motion.div
+            css={{
+              width: "60px",
+              height: "4px",
+              background: gradients.primary,
+              borderRadius: "2px",
+              margin: "0 auto 48px",
+            }}
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          />
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.2}>
           <div
             css={mq({
               display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              gap: "16px",
-              alignSelf: "center",
-              marginBottom: ["-24px", "0px", "0px"],
-              flexWrap: "wrap",
+              flexDirection: ["column", "row", "row"],
+              alignItems: ["unset", "center", "center"],
+              justifyContent: "space-between",
+              gap: "36px",
+              marginBottom: "64px",
             })}
           >
+            <p
+              css={mq({
+                fontSize: ["16px", "18px", "20px"],
+                margin: 0,
+                color: colors.gray[300],
+                fontFamily: PARAGRAPH_FAMILY,
+                fontWeight: 400,
+                maxWidth: "600px",
+              })}
+            >
+              A collection of industry, personal, and university projects
+              showcasing my expertise in full-stack development, UI/UX design,
+              and modern technologies.
+            </p>
+
             <div
-              css={{
+              css={mq({
                 display: "flex",
                 flexDirection: "row",
                 alignItems: "center",
-                gap: "8px",
-              }}
+                gap: "20px",
+                alignSelf: "center",
+                flexWrap: "wrap",
+              })}
             >
-              <div
-                css={{
-                  width: "20px",
-                  height: "20px",
-                  background: "#0235ec",
-                  borderRadius: "50%",
-                }}
-              />
-              <span
-                css={{
-                  fontFamily: PARAGRAPH_FAMILY,
-                  color: "#000",
-                  lineHeight: 1,
-                }}
-              >
-                Industry
-              </span>
-            </div>
-            <div
-              css={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <div
-                css={{
-                  width: "20px",
-                  height: "20px",
-                  background: "#ea9802",
-                  borderRadius: "50%",
-                }}
-              />
-              <span
-                css={{
-                  fontFamily: PARAGRAPH_FAMILY,
-                  color: "#000",
-                  lineHeight: 1,
-                }}
-              >
-                University
-              </span>
-            </div>
-            <div
-              css={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                gap: "8px",
-              }}
-            >
-              <div
-                css={{
-                  width: "20px",
-                  height: "20px",
-                  background: "#ffc04b",
-                  borderRadius: "50%",
-                }}
-              />
-              <span
-                css={{
-                  fontFamily: PARAGRAPH_FAMILY,
-                  color: "#000",
-                  lineHeight: 1,
-                }}
-              >
-                Personal
-              </span>
+              <ProjectTypeIndicator color="#0235ec" label="Industry" />
+              <ProjectTypeIndicator color="#ea9802" label="University" />
+              <ProjectTypeIndicator color="#ffc04b" label="Personal" />
             </div>
           </div>
-        </div>
-        <GapVertical times={12} />
-        <div css={{ position: "relative" }}>
+        </AnimatedSection>
+
+        <AnimatedSection delay={0.4}>
           <div
             css={mq({
-              display: "flex",
-              flexDirection: "row",
-              width: "120%",
-              alignItems: "center",
-              justifyContent: "center",
-              paddingTop: "36px",
-              scrollBehavior: "smooth",
+              display: "grid",
+              gridTemplateColumns: ["1fr", "repeat(2, 1fr)", "repeat(3, 1fr)"],
+              gap: "32px",
               position: "relative",
-              gap: "64px 52px",
-              marginLeft: "-10%",
-              flexWrap: "wrap",
             })}
           >
             {sortedProjects
-              ? sortedProjects.map((project, index) =>
-                  ProjectCard(index, project)
-                )
+              ? sortedProjects.map((project, index) => (
+                  <ProjectCard
+                    key={project.title}
+                    index={index}
+                    project={project}
+                  />
+                ))
               : null}
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
 };
 
-function ProjectCard(index: number, project: ProjectModel) {
+const ProjectTypeIndicator = ({
+  color,
+  label,
+}: {
+  color: string;
+  label: string;
+}) => (
+  <motion.div
+    css={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      gap: "10px",
+      padding: "8px 16px",
+      background: glassEffect.background,
+      backdropFilter: glassEffect.backdropFilter,
+      border: glassEffect.border,
+      borderRadius: "20px",
+    }}
+    whileHover={{ scale: 1.05 }}
+    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+  >
+    <div
+      css={{
+        width: "12px",
+        height: "12px",
+        background: color,
+        borderRadius: "50%",
+        boxShadow: `0 0 10px ${color}50`,
+      }}
+    />
+    <span
+      css={{
+        fontFamily: PARAGRAPH_FAMILY,
+        color: colors.light,
+        fontSize: "14px",
+        fontWeight: 500,
+      }}
+    >
+      {label}
+    </span>
+  </motion.div>
+);
+
+function ProjectCard({
+  index,
+  project,
+}: {
+  index: number;
+  project: ProjectModel;
+}) {
   const bg = {
     industry: "#0235ec",
-    personal: "#ffc04b",
     university: "#ea9802",
+    personal: "#ffc04b",
   };
+
   return (
-    <div
-      css={mq({
-        display: "flex",
-        borderRadius: "12px",
-        minWidth: ["90%", "460px", "544px"],
-        maxWidth: ["90%", "460px", "544px"],
-        height: ["640px", "660px", "720px"],
-        flexDirection: "column",
-        alignItems: "center",
+    <motion.div
+      css={{
         position: "relative",
-        color: "black",
-        boxShadow:
-          "0px 2px 4px rgba(0, 0, 0, 0.05), 0px 2px 16px rgba(0, 0, 0, 0.1)",
-        fontFamily: PARAGRAPH_FAMILY,
-        borderBottom: `4px solid ${bg[project.type]}`,
-      })}
-      key={index}
+        background: glassEffect.background,
+        backdropFilter: glassEffect.backdropFilter,
+        border: glassEffect.border,
+        borderRadius: "20px",
+        overflow: "hidden",
+        transition: "all 0.3s ease",
+        cursor: "pointer",
+      }}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.1,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      }}
+      whileHover={{
+        y: -10,
+        boxShadow: shadows["2xl"],
+      }}
     >
+      {/* Project type indicator */}
       <div
-        css={mq({
+        css={{
           position: "absolute",
-          padding: "10px 16px",
-          borderRadius: "24px",
-          background: "white",
-          fontSize: [FONT_100, "14px", "14px"],
-          top: "-16px",
-          right: "50%",
-          transform: "translate(50%, 0%)",
-          boxShadow: "0px 0px 16px rgba(0, 0, 0, 0.1)",
-        })}
-      >
-        {project.timePeriod}
-      </div>
+          top: "16px",
+          right: "16px",
+          width: "12px",
+          height: "12px",
+          background: bg[project.type],
+          borderRadius: "50%",
+          zIndex: 2,
+          boxShadow: `0 0 15px ${bg[project.type]}80`,
+        }}
+      />
+
+      {/* Project Image */}
       <div
-        css={mq({
+        css={{
+          position: "relative",
           width: "100%",
-          height: ["160px", "200px", "280px"],
-          borderRadius: "24px 24px 0px 0px",
-        })}
+          height: "200px",
+          overflow: "hidden",
+          borderRadius: "16px 16px 0 0",
+        }}
       >
-        <img
+        <motion.img
           src={project.thumbnail}
-          loading="lazy"
+          alt={project.title}
           css={{
-            borderRadius: "12px 12px 0px 0px",
-            height: "100%",
             width: "100%",
+            height: "100%",
             objectFit: "cover",
+            transition: "transform 0.3s ease",
+          }}
+          whileHover={{ scale: 1.1 }}
+        />
+
+        {/* Overlay gradient */}
+        <div
+          css={{
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            right: 0,
+            height: "50%",
+            background: "linear-gradient(transparent, rgba(0,0,0,0.7))",
           }}
         />
       </div>
-      <div css={mq({ marginBottom: ["30px", "30px", "36px"] })} />
+
+      {/* Content */}
       <div
         css={{
-          display: "flex",
-          flexDirection: "column",
-          width: "85%",
+          padding: "24px",
         }}
       >
-        <div
-          css={mq({
-            display: "flex",
-            flexDirection: ["column", "row", "row"],
-            width: "100%",
-            alignItems: ["flex-start", "center", "center"],
-            justifyContent: "space-between",
-            marginBottom: ["-12px", "0px", "0px"],
-          })}
+        <motion.h4
+          css={{
+            fontFamily: HEADING_FAMILY,
+            fontSize: "20px",
+            fontWeight: 700,
+            color: colors.light,
+            margin: "0 0 8px 0",
+            lineHeight: 1.2,
+          }}
+          whileHover={{ color: colors.primary[400] }}
         >
-          <h2
-            css={mq({
-              margin: 0,
-              fontSize: ["18px", "24px", "24px"],
-              fontWeight: 700,
-              lineHeight: 1,
-            })}
-          >
-            {project.title}
-          </h2>
-          <p
-            css={{
-              fontWeight: 500,
-              fontSize: FONT_100,
-              color: "#777",
-            }}
-          >
-            {project.roles.join(", ")}
-          </p>
-        </div>
-        <GapVertical times={2} />
+          {project.title}
+        </motion.h4>
+
         <p
-          css={mq({
-            margin: 0,
-            fontSize: ["14px", "16px", "16px"],
-            color: "#333",
-            lineHeight: 1,
-          })}
+          css={{
+            fontFamily: PARAGRAPH_FAMILY,
+            fontSize: "12px",
+            color: colors.gray[500],
+            margin: "0 0 12px 0",
+            fontWeight: 500,
+          }}
         >
-          {project.subtitle}
+          {project.timePeriod}
         </p>
-        <div css={mq({ marginBottom: ["14px", "16px", "20px"] })} />
+
         <p
-          css={mq({
-            margin: 0,
-            fontWeight: 400,
-            lineHeight: "180%",
-            fontSize: ["14px", "14px", "14px"],
-          })}
+          css={{
+            fontFamily: PARAGRAPH_FAMILY,
+            fontSize: "14px",
+            color: colors.gray[400],
+            lineHeight: 1.6,
+            margin: "0 0 16px 0",
+            display: "-webkit-box",
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+          }}
         >
           {project.desc}
         </p>
-        <GapVertical times={6} />
+
+        {/* Tech Stack */}
         <div
           css={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            width: "100%",
+            flexWrap: "wrap",
+            gap: "8px",
+            marginBottom: "20px",
           }}
         >
-          <PlaceSkills skills={project.skills[0]} />
-          {project.skills.length > 1 && (
-            <Fragment>
-              <div
-                css={mq({
-                  marginRight: ["0px", "16px", "24px"],
-                  marginBottom: ["24px", "0px", "0px"],
-                })}
-              />
-              <PlaceSkills skills={project.skills[1]} />
-            </Fragment>
+          {project.skills[0]?.technologies
+            .slice(0, 4)
+            .map((tech, techIndex: number) => (
+              <span
+                key={techIndex}
+                css={{
+                  fontSize: "11px",
+                  fontFamily: PARAGRAPH_FAMILY,
+                  background: `${colors.primary[600]}30`,
+                  color: colors.primary[300],
+                  padding: "4px 8px",
+                  borderRadius: "12px",
+                  fontWeight: 500,
+                  border: `1px solid ${colors.primary[600]}50`,
+                }}
+              >
+                {tech.title}
+              </span>
+            ))}
+          {project.skills[0]?.technologies.length > 4 && (
+            <span
+              css={{
+                fontSize: "11px",
+                fontFamily: PARAGRAPH_FAMILY,
+                color: colors.gray[400],
+                padding: "4px 8px",
+                fontWeight: 500,
+              }}
+            >
+              +{project.skills[0].technologies.length - 4}
+            </span>
           )}
         </div>
-        <GapVertical times={6} />
+
+        {/* Action Buttons */}
         <div
-          css={mq({
+          css={{
             display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "flex-end",
-            position: "absolute",
-            bottom: ["16px", "36px", "36px"],
-            right: ["16px", "36px", "36px"],
             gap: "12px",
-          })}
+            alignItems: "center",
+          }}
         >
-          {project.links
-            ? project.links.map((link, index) => (
-                <div
-                  css={mq({
-                    display: "flex",
-                    flexDirection: "row",
-                    alignItems: "center",
-                    padding: ["4.5px 7px", "6px 9px", "8px 12px"],
-                    background: !link.title.toLowerCase().includes("demo")
-                      ? "white"
-                      : "#5A88FF",
-                    color: !link.title.toLowerCase().includes("demo")
-                      ? "black"
-                      : "white",
-                    borderRadius: "8px",
-                    transition: "0.4s",
-                    ":hover": {
-                      background: !link.title.toLowerCase().includes("demo")
-                        ? [
-                            !link.title.toLowerCase().includes("demo")
-                              ? "white"
-                              : "#5A88FF",
-                            "rgba(210, 210, 210)",
-                            "rgba(210, 210, 210)",
-                          ]
-                        : [
-                            !link.title.toLowerCase().includes("demo")
-                              ? "white"
-                              : "#5A88FF",
-                            "rgba(41, 101, 255)",
-                            "rgba(41, 101, 255)",
-                          ],
-                    },
-                    boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.15)",
-                  })}
-                  key={index}
-                >
-                  <img
-                    src={link.icon}
-                    loading="lazy"
-                    css={{
-                      width: "14px",
-                      height: "14px",
-                      filter: link.title.toLowerCase().includes("demo")
-                        ? "invert(1)"
-                        : "",
-                    }}
-                  />
-                  <GapHorizontal times={2} />
-                  <a
-                    css={mq({
-                      fontSize: ["10px", FONT_100, FONT_100],
-                      fontWeight: 600,
-                      // textTransform: "uppercase",
-                      textDecoration: "none",
-                      color: "inherit",
-                    })}
-                    href={link?.disable ? null : link.link}
-                    target={"_blank"}
-                  >
-                    {link.title}
-                  </a>
-                </div>
-              ))
-            : null}
+          {project.links?.find((link) =>
+            link.title.toLowerCase().includes("github")
+          ) && (
+            <motion.a
+              href={
+                project.links.find((link) =>
+                  link.title.toLowerCase().includes("github")
+                )?.link
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              css={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                padding: "8px 16px",
+                background: colors.gray[800],
+                color: colors.light,
+                fontSize: "12px",
+                fontFamily: PARAGRAPH_FAMILY,
+                fontWeight: 500,
+                borderRadius: "8px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+                border: `1px solid ${colors.gray[700]}`,
+              }}
+              whileHover={{
+                background: colors.gray[700],
+                scale: 1.05,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaGithub size={14} />
+              Code
+            </motion.a>
+          )}
+
+          {project.links?.find(
+            (link) =>
+              link.title.toLowerCase().includes("demo") ||
+              link.title.toLowerCase().includes("live")
+          ) && (
+            <motion.a
+              href={
+                project.links.find(
+                  (link) =>
+                    link.title.toLowerCase().includes("demo") ||
+                    link.title.toLowerCase().includes("live")
+                )?.link
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              css={{
+                display: "flex",
+                alignItems: "center",
+                gap: "6px",
+                padding: "8px 16px",
+                background: gradients.primary,
+                color: colors.light,
+                fontSize: "12px",
+                fontFamily: PARAGRAPH_FAMILY,
+                fontWeight: 500,
+                borderRadius: "8px",
+                textDecoration: "none",
+                transition: "all 0.3s ease",
+              }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: shadows.glow,
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <FaExternalLinkAlt size={14} />
+              Demo
+            </motion.a>
+          )}
         </div>
-        {project.links ? <GapVertical times={10} /> : null}
       </div>
-    </div>
+    </motion.div>
   );
 }
